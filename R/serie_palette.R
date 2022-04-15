@@ -1,4 +1,7 @@
-serie_palette <- function(name,palette_color,n, type = c("discrete", "continuous")) {
+# serie palette function
+# enter name, palette of preference, number, type
+
+serie_palette <- function(name, palette_color, n, type = c("discrete", "continuous")) {
   
   pal <- palette_color[name][[1]]
   
@@ -46,3 +49,6 @@ print.serie_palette <- function(x, ...) {
        labels = paste0(attr(x,"name"),", n=",pallength),
        cex = 3, family = "sans")
 }
+
+
+

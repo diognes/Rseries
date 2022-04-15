@@ -1,6 +1,6 @@
-# anime palettes color
+# serie anime palettes color
 
-anime_palettes = list(
+palette_anime = list(
   digi_frontier = c(
     "#FAA404",
     "#FA2405",
