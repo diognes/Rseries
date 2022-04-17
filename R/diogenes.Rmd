@@ -33,3 +33,13 @@ n<- length(palette_anime$digi_frontier)
        cex = 3, family = "sans")
 ```
 
+
+```{r}
+library(tidyverse)
+pal=serie_palette("Lupin"  ,n=6)
+ggplot(diamonds, aes(x=price,fill=cut))+
+  geom_density(position='stack')+
+  scale_fill_manual(values=(pal))+
+  theme_minimal()
+```
+

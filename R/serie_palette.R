@@ -51,7 +51,7 @@ print.serie_palette <- function(x, ...) {
        cex = 3, family = "sans")
 }
 
-# is.serie_palette <- function(x) {
-#   inherits(x, "serie_palette")
-# }
+ is.serie_palette <- function(x) {
+   inherits(x, "serie_palette")
+ }
 
