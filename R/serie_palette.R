@@ -1,7 +1,7 @@
 # serie palette function
 # enter name, palette of preference, number, type
 
-serie_palette <- function(name, palette_color, n, type = c("discrete", "continuous")) {
+serie_palette <- function(name, palette_color = palette_netflyx, n, type = c("discrete", "continuous")) {
   
   pal <- palette_color[name][[1]]
   

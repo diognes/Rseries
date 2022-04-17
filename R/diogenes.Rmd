@@ -1,0 +1,14 @@
+---
+title: "Article"
+author: "Diogenes"
+date: "16/4/2022"
+output: html_document
+---
+
+
+
+```{r,message=F,warning=F}
+serie_palette("Lupin"  ,n=4)
+serie_palette("Calamar",n=5)
+```
+
