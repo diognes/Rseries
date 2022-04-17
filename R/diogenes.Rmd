@@ -8,8 +8,11 @@ output: html_document
 
 
 ```{r,message=F,warning=F}
-serie_palette("Lupin"  ,n=4)
-serie_palette("Calamar",n=5)
+serie_palette("Lupin"  ,n=6)
+serie_palette("Calamar",n=6)
+serie_palette("Ozark",n=6)   #GambitoDama
+serie_palette("GambitoDama",n=6) 
+serie_palette("EstamosMuert",n=6)
 serie_palette("digi_frontier",palette_color =palette_anime ,n=5)
 ```
 
