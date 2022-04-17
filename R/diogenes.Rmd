@@ -10,5 +10,23 @@ output: html_document
 ```{r,message=F,warning=F}
 serie_palette("Lupin"  ,n=4)
 serie_palette("Calamar",n=5)
+serie_palette("digi_frontier",palette_color =palette_anime ,n=5)
+```
+
+
+
+```{r}
+
+n<- length(palette_anime$digi_frontier)
+
+  image(1:n, 1,
+        as.matrix(1:n),
+        col = palette_anime$digi_frontier,
+        axes=FALSE)
+  
+  rect(0, 0.9, n + 1, 1.1, col = rgb(1, 1, 1, 0.8), border = NA)
+  text(median(1:n), 1,
+       labels = paste0(attr(palette_anime$digi_frontier,"name"),", n=",n),
+       cex = 3, family = "sans")
 ```
 

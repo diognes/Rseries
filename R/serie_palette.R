@@ -45,10 +45,13 @@ print.serie_palette <- function(x, ...) {
         col = x,
         axes=FALSE)
   
+  rect(0, 0.9, pallength + 1, 1.1, col = rgb(1, 1, 1, 0.8), border = NA)
   text(median(1:pallength), 1,
        labels = paste0(attr(x,"name"),", n=",pallength),
        cex = 3, family = "sans")
 }
 
-
+# is.serie_palette <- function(x) {
+#   inherits(x, "serie_palette")
+# }
 
