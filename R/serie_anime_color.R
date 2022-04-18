@@ -58,6 +58,6 @@ palette_anime = list(
   
   cardcaptor_clear = c("#3278CC", "#567EB7", "#E96388", "#E3B277", "#E9D9C3", "#F8F3F0"), #6
   
-  fmab = c("#F9F0C4, #A7A8AC, #5F413D, #C2A68C, #535959, #C86D6A") #6
+  fmab = c("#F9F0C4", "#A7A8AC", "#5F413D", "#C2A68C", "#535959", "#C86D6A") #6
   
 )
