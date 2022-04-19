@@ -1,0 +1,30 @@
+Package: Rseries
+Type: Package
+Title: Title: Package to download Economic data from Peruvian public institutions
+Version: 0.0.1.0
+Encoding: UTF-8
+Authors@R:
+  c(person(given = "Jesus",
+           family = "Quispe-Quispe",
+           role = c("aut"),
+           email = "jesus.quispe.rsjp@gmail.com",
+           comment = c(ORCID = "",
+                        webpage = "")),
+    person(given = "Rodrigo",
+           family = "Norabuena Mascaraqui",
+           role = c("aut"),
+           email = "rod_nm@outlook.com",
+           comment = c(ORCID = "")),
+    person(given = "Giancarlo",
+           family = "Liñan Cuenca",
+           role = "aut",
+           email = "glinan@pucp.pe",
+           comment = c(ORCID = " "))
+           )
+Author: Jesus Quispe-Quispe [aut, cre],
+  Pat Developer [aut],
+  A. User [ctb]
+Maintainer: Jesus Quispe-Quispe <jesus.quispe.rsjp@gmail.com>
+RoxygenNote: 7.1.2
+URL: https://github.com/diognes/Rseries
+BugReports: https://github.com/diognes/Rseries/issues
