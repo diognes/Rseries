@@ -1,5 +1,21 @@
-# serie palette function
-# enter name, palette of preference, number, type
+# 1. Palette builder function
+#::::::::::::::::::::::::::::::::::::::::::::::
+
+#' Series Palette Generator.
+#'
+#' This function builds palettes based on album covers by a selection of latin artists. The selection has been subjectively made by the author, my apologies. Almost all palettes, except for \code{ozuna} and \code{rosalia}, have been checked for color blind safety using \href{https://gka.github.io/palettes/#/9|s|00429d,96ffea,ffffe0|ffffe0,ff005e,93003a|1|1}{Chroma.js Color Palette Helper}.
+#'
+#'@param name Name of the color palette. Current options are Netflyx and Anime.
+#'
+#'@param n Number of colors to be used. Each palette includes up to 9 colors for discrete palettes. Any \code{n} can be chosen for continuous palettes.
+#'
+#'@param type Usage of palette as "continuous" or "discrete". Continuous palettes interpolate the three first colors of the palette to create a gradient. If not specified, function assumes continuous if n>9 and discrete if n<9.
+#'
+#'@param palette_color list of palettes to use.
+#'
+#'@return A vector of \code{n} colors
+#'
+#' @export
 
 serie_palette <- function(name, palette_color = palette_netflyx, n, type = c("discrete", "continuous")) {
   
