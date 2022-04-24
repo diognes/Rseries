@@ -26,5 +26,6 @@ Author: Jesus Quispe-Quispe [aut, cre],
   A. User [ctb]
 Maintainer: Jesus Quispe-Quispe <jesus.quispe.rsjp@gmail.com>
 RoxygenNote: 7.1.2
-URL: https://github.com/diognes/Rseries
+URL: https://github.com/diognes/Rseries,
+    https://diognes.github.io/Rseries/
 BugReports: https://github.com/diognes/Rseries/issues
