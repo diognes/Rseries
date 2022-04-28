@@ -13,6 +13,6 @@ library(Rseries)
 
 
 ```{r,message=F,warning=F}
-Rseries::serie_palette("poke",palette_color = palette_anime,4)
+Rseries::serie_palette("tokyorev",palette_color = palette_anime,4)
 ```
 

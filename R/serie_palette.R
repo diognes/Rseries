@@ -50,6 +50,8 @@ serie_palette <- function(name, palette_color = palette_netflyx, n, type = c("di
   structure(out, class = "serie_palette", name = name)
 }
 
+#' @export
+
 
 # 3. Palette Print Function
 #::::::::::::::::::::::::::::::::::::::::
