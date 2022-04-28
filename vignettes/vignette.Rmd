@@ -1,0 +1,13 @@
+---
+title: "Introduction to Rseries"
+author: "Diogenes"
+date: "27/4/2022"
+output: html_document
+---
+
+
+
+```{r}
+
+```
+
