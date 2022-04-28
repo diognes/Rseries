@@ -51,6 +51,12 @@ serie_palette <- function(name, palette_color = palette_netflyx, n, type = c("di
 }
 
 
+# 3. Palette Print Function
+#::::::::::::::::::::::::::::::::::::::::
+#' @importFrom graphics rect par image text
+#' @importFrom stats median
+#'
+
 print.serie_palette <- function(x, ...) {
   pallength <- length(x)
   latinpar <- par(mar=c(0.25,0.25,0.25,0.25))

@@ -2,3 +2,8 @@
 
 export(palette_anime)
 export(serie_palette)
+importFrom(graphics,image)
+importFrom(graphics,par)
+importFrom(graphics,rect)
+importFrom(graphics,text)
+importFrom(stats,median)
