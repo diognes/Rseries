@@ -5,10 +5,37 @@ date: "`r format(Sys.time(), '%d/%m/%Y')`"
 output:
   html_document:
     code_folding: hide
+    toc: true # table of content true
+    toc_depth: 3  # upto three depths of headings (specified by #, ## and ###)
+    number_sections: true  ## if you want number sections at each table header
+    # theme: united
+    # highlight: tango  # specifies the syntax highlighting style
 ---
+
+# Brief explanation
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE,warning=FALSE,message=FALSE,fig.align="center")
+```
+
+We can select two palettes at the moment: `palette_netflyx` and `palette_anime`. Each palette is a list of series. Each palette in this package have a total of 6 colors. With the function `serie_palette` we can select a palette following this entry:
+
+`serie_palette( enter name, palette of preference, number of colors, type discrete or continous )`
+
+Each palette estructure looks similar to this:
+
+```{r class.source = 'fold-show'}
+# serie netflyx palettes color
+
+palette_netflyx <- list(
+  Lupin        = c("#E26A40","#0E263C","#3B6183","#5C85B1","#7BA0C6","#D9E2EC"),
+  
+  Ozark         =c("#a9d2d0","#62a7af","#4d8a9d","#2b6b76","#1c5758","#123b4c"),
+  
+  GambitoDama   =c("#291f2a","#634039","#916b58","#be754c","#9a4d1b","#824529"),
+  
+  EstamosMuert = c("#c9cacc","#96aea8","#465e69","#5d5e4d","#1c4b46","#8f4031")
+) 
 ```
 
 Let's see some examples using ggplot2 based on [the R Graph Gallery
@@ -20,6 +47,7 @@ Let's see some examples using ggplot2 based on [the R Graph Gallery
 # Palette: Lupin
 
 ## A classic boxplot
+
 
 ```{r}
 # Libraries
@@ -206,7 +234,7 @@ colnames(DAT)=c("Year","Group","Value")
 DAT=DAT[order( DAT$Year, DAT$Group) , ]
 
 # plot
-pal = serie_palette("bolt", palette_anime, 12)
+pal = serie_palette("bolt", palette_anime, 6)
 pal = colorRampPalette(pal)(ngroup)
 pal=pal[sample(c(1:length(pal)) , size=length(pal) ) ]
 
@@ -311,7 +339,7 @@ colnames(DAT)=c("Year","Group","Value")
 DAT=DAT[order( DAT$Year, DAT$Group) , ]
 
 # plot
-pal = serie_palette("poputepik", palette_anime, 12)
+pal = serie_palette("poputepik", palette_anime, 6)
 pal = colorRampPalette(pal)(ngroup)
 pal=pal[sample(c(1:length(pal)) , size=length(pal) ) ]
 
@@ -416,7 +444,7 @@ colnames(DAT)=c("Year","Group","Value")
 DAT=DAT[order( DAT$Year, DAT$Group) , ]
 
 # plot
-pal = serie_palette("tokyorev", palette_anime, 12)
+pal = serie_palette("tokyorev", palette_anime, 6)
 pal = colorRampPalette(pal)(ngroup)
 pal=pal[sample(c(1:length(pal)) , size=length(pal) ) ]
 
@@ -520,7 +548,7 @@ colnames(DAT)=c("Year","Group","Value")
 DAT=DAT[order( DAT$Year, DAT$Group) , ]
 
 # plot
-pal = serie_palette("yona", palette_anime, 12)
+pal = serie_palette("yona", palette_anime, 6)
 pal = colorRampPalette(pal)(ngroup)
 pal=pal[sample(c(1:length(pal)) , size=length(pal) ) ]
 
@@ -626,7 +654,7 @@ colnames(DAT)=c("Year","Group","Value")
 DAT=DAT[order( DAT$Year, DAT$Group) , ]
 
 # plot
-pal = serie_palette("cardcaptor", palette_anime, 12)
+pal = serie_palette("cardcaptor", palette_anime, 6)
 pal = colorRampPalette(pal)(ngroup)
 pal=pal[sample(c(1:length(pal)) , size=length(pal) ) ]
 
