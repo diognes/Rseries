@@ -17,7 +17,7 @@ This package contains beauty palettes to personalize plots with the style of ser
 
 ## **Package installation**
 
-You can install the first version of innovar from
+You can install the first version of Rseries from
 [GitHub](https://github.com/):
 
 The following code just copy and paste into the R console:
