@@ -12,7 +12,9 @@
 
 ## **Description**
 
-This package contains beauty palettes to personalize plots with the style of series of  plataforms like Netflyx, Amazon Prime  or local TV from Latin American Countries 
+This package contains beauty palettes to personalize plots with the style of series of  plataforms like Netflyx, Amazon Prime  or local TV from Latin American Countries
+
+
 ## **Package installation**
 
 You can install the first version of innovar from
