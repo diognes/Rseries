@@ -1,6 +1,6 @@
 Package: Rseries
 Type: Package
-Title: Title: Package to download Economic data from Peruvian public institutions
+Title: Package for customize ggplots with palette based from series and anime
 Version: 0.0.1.0
 Encoding: UTF-8
 Authors@R:
