@@ -11,6 +11,6 @@ An object of class \code{list} of length 28.
 palette_anime
 }
 \description{
-Use \code{names(palette_anime)} to view list of palette names.
+Use \code{names(palette_anime)} to view list of palette anime names.
 }
 \keyword{datasets}

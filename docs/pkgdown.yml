@@ -2,8 +2,8 @@ pandoc: 2.14.0.3
 pkgdown: 2.0.2
 pkgdown_sha: ~
 articles:
-  vignette: vignette.html
-last_built: 2022-04-28T02:47Z
+  simple_examples: simple_examples.html
+last_built: 2022-04-28T13:23Z
 urls:
   reference: https://diognes.github.io/Rseries/reference
   article: https://diognes.github.io/Rseries/articles

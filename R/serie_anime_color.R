@@ -1,8 +1,8 @@
-# 2.Create the color palettes
+# 3.Create the color palettes
 #::::::::::::::::::::::::::::::::::::::::::::::
 #' Complete list of palettes
 #'
-#' Use \code{names(palette_anime)} to view list of palette names.
+#' Use \code{names(palette_anime)} to view list of palette anime names.
 #'
 #' @export
 

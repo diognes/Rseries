@@ -7,6 +7,9 @@
     <loc>https://diognes.github.io/Rseries/articles/index.html</loc>
   </url>
   <url>
+    <loc>https://diognes.github.io/Rseries/articles/simple_examples.html</loc>
+  </url>
+  <url>
     <loc>https://diognes.github.io/Rseries/articles/vignette.html</loc>
   </url>
   <url>
@@ -19,10 +22,16 @@
     <loc>https://diognes.github.io/Rseries/LICENSE-text.html</loc>
   </url>
   <url>
+    <loc>https://diognes.github.io/Rseries/LICENSE.html</loc>
+  </url>
+  <url>
     <loc>https://diognes.github.io/Rseries/reference/index.html</loc>
   </url>
   <url>
     <loc>https://diognes.github.io/Rseries/reference/palette_anime.html</loc>
+  </url>
+  <url>
+    <loc>https://diognes.github.io/Rseries/reference/palette_netflyx.html</loc>
   </url>
   <url>
     <loc>https://diognes.github.io/Rseries/reference/serie_palette.html</loc>
