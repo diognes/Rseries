@@ -1,4 +1,11 @@
-# serie netflyx palettes color
+# 3.Create the color palettes
+#::::::::::::::::::::::::::::::::::::::::::::::
+#' Complete list of palettes
+#'
+#' Use \code{names(palette_netflyx)} to view list of palette names.
+#'
+#' @export
+
 
 palette_netflyx <- list(
   Lupin        = c("#E26A40", "#0E263C", "#3B6183", "#5C85B1", 

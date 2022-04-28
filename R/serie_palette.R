@@ -53,7 +53,7 @@ serie_palette <- function(name, palette_color = palette_netflyx, n, type = c("di
 #' @export
 
 
-# 3. Palette Print Function
+# 2. Palette Print Function
 #::::::::::::::::::::::::::::::::::::::::
 #' @importFrom graphics rect par image text
 #' @importFrom stats median
