@@ -1,8 +1,8 @@
-# 3.Create the color palettes
+# 4.Create the color palettes
 #::::::::::::::::::::::::::::::::::::::::::::::
 #' Complete list of palettes
 #'
-#' Use \code{names(palette_netflyx)} to view list of palette names.
+#' Use \code{names(palette_netflyx)} to view list of palette netflyx names.
 #'
 #' @export
 

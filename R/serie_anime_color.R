@@ -2,7 +2,7 @@
 #::::::::::::::::::::::::::::::::::::::::::::::
 #' Complete list of palettes
 #'
-#' Use \code{names(palette_anime)} to view list of palette names.
+#' Use \code{names(palette_anime)} to view list of palette anime names.
 #'
 #' @export
 
