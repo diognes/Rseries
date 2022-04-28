@@ -3,7 +3,7 @@
 
 #' Series Palette Generator.
 #'
-#' This function builds palettes based on album covers by a selection of latin artists. The selection has been subjectively made by the author, my apologies. Almost all palettes, except for \code{ozuna} and \code{rosalia}, have been checked for color blind safety using \href{https://gka.github.io/palettes/#/9|s|00429d,96ffea,ffffe0|ffffe0,ff005e,93003a|1|1}{Chroma.js Color Palette Helper}.
+#' This function builds palettes based on popular series and anime from Netflix and others visualmedia. The selection has been subjectively made by the authors.
 #'
 #'@param name Name of the color palette. Current options are Netflyx and Anime.
 #'
