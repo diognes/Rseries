@@ -7,7 +7,12 @@ output: html_document
 
 
 
-```{r}
-iris
+```{r,message=F,warning=F}
+library(Rseries)
+```
+
+
+```{r,message=F,warning=F}
+Rseries::serie_palette("poke",palette_color = palette_anime,4)
 ```
 
