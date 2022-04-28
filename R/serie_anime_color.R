@@ -1,4 +1,12 @@
-# serie anime palettes color
+# 1.Create the color palettes
+#::::::::::::::::::::::::::::::::::::::::::::::
+#' Complete list of palettes
+#'
+#' Use \code{names(latin_palettes)} to view list of palette names.
+#' Currently:  aventura, badbunny1, badbunny2, badgyal, beckyg, buenavista, calle13, daddy1, daddy2,
+#' don, ivyqueen, karolg, natti, nicky, ozuna, planb, rauw, rosalia, shakira, wyy.
+#'
+#' @export
 
 palette_anime = list(
   
