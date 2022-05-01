@@ -95,7 +95,7 @@ print.serie_palette <- function(x, ...) {
    pal <- serie_palette(name = palette ,palette_family = palette_netflyx) #, reverse = reverse
    
    if (discrete) {
-     discrete_scale("fill", paste0("lis_", palette), palette = pal, ...)
+     discrete_scale("fill", paste0("serie_palette_", palette), palette = pal, ...)
    } else {
      scale_fill_gradientn(colours = pal(256), ...)
    }

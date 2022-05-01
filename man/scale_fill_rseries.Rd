@@ -6,7 +6,7 @@
 \usage{
 scale_fill_rseries(
   palette_family = palette_netflyx,
-  palette = Lupin,
+  palette = "Lupin",
   discrete = TRUE,
   reverse = FALSE,
   ...
