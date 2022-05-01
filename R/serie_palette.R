@@ -11,15 +11,15 @@
 #'
 #'@param type Usage of palette as "continuous" or "discrete". Continuous palettes interpolate the three first colors of the palette to create a gradient. If not specified, function assumes continuous if n>9 and discrete if n<9.
 #'
-#'@param palette_color list of palettes to use.
+#'@param palette_family list of palettes to use.
 #'
 #'@return A vector of \code{n} colors
 #'
 #' @export
 
-serie_palette <- function(name, palette_color = palette_netflyx, n, type = c("discrete", "continuous")) {
+serie_palette <- function(name, palette_family = palette_netflyx, n, type = c("discrete", "continuous")) {
   
-  pal <- palette_color[name][[1]]
+  pal <- palette_family[name][[1]]
   
   
   if (is.null(pal)){ 
@@ -87,11 +87,11 @@ print.serie_palette <- function(x, ...) {
  #' 
  #' @export
  scale_fill_rseries <- function(palette_family = palette_netflyx, 
-                                palette  =  Lupin , 
+                                palette  =  "Lupin" , 
                                 discrete = TRUE, 
                                 reverse  = FALSE,
                                ...) {
-   pal <- serie_palette(palette = palette_color[palette], reverse = reverse)
+   pal <- serie_palette(name = palette_family[palette]) #, reverse = reverse
    
    if (discrete) {
      discrete_scale("fill", paste0("lis_", palette), palette = pal, ...)

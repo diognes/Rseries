@@ -6,7 +6,7 @@
 \usage{
 serie_palette(
   name,
-  palette_color = palette_netflyx,
+  palette_family = palette_netflyx,
   n,
   type = c("discrete", "continuous")
 )
@@ -14,7 +14,7 @@ serie_palette(
 \arguments{
 \item{name}{Name of the color palette. Current options are Netflyx and Anime.}
 
-\item{palette_color}{list of palettes to use.}
+\item{palette_family}{list of palettes to use.}
 
 \item{n}{Number of colors to be used. Each palette includes up to 9 colors for discrete palettes. Any \code{n} can be chosen for continuous palettes.}
 
