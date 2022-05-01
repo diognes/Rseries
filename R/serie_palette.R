@@ -92,6 +92,9 @@ print.serie_palette <- function(x, ...) {
                                 discrete = TRUE, 
                                 reverse  = FALSE,
                                ...) {
+   # palette_family requires a function no a list of colors 
+   # check reorganize the scale function to specify a better function for palettes
+   # the output should be a funcion not a list of colors 
    pal <- serie_palette(name = palette ,palette_family = palette_netflyx) #, reverse = reverse
    
    if (discrete) {
