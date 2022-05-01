@@ -88,7 +88,7 @@ print.serie_palette <- function(x, ...) {
  #' @export
  
  scale_fill_rseries <- function(palette_family = palette_netflyx, 
-                                palette  =  Lupin , 
+                                palette  =  "Lupin" , 
                                 discrete = TRUE, 
                                 reverse  = FALSE,
                                ...) {
