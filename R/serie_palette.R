@@ -78,6 +78,25 @@ print.serie_palette <- function(x, ...) {
  is.serie_palette <- function(x) {
    inherits(x, "serie_palette")
  }
+ 
+ 
 
- # 2. Palette Print Function
+ # 3. fill function 
  #::::::::::::::::::::::::::::::::::::::::
+ #' function to personalize fill aesthetic
+ #' 
+ #' @export
+ scale_fill_rseries <- function(palette_family = palette_netflyx, 
+                                palette  =  Lupin , 
+                                discrete = TRUE, 
+                                reverse  = FALSE,
+                               ...) {
+   pal <- serie_palette(palette = palette_color[palette], reverse = reverse)
+   
+   if (discrete) {
+     discrete_scale("fill", paste0("lis_", palette), palette = pal, ...)
+   } else {
+     scale_fill_gradientn(colours = pal(256), ...)
+   }
+ }
+ 
