@@ -92,7 +92,7 @@ print.serie_palette <- function(x, ...) {
                                 discrete = TRUE, 
                                 reverse  = FALSE,
                                ...) {
-   pal <- serie_palette(name = palette_family[palette]) #, reverse = reverse
+   pal <- serie_palette(name = palette_family[palette][[1]]) #, reverse = reverse
    
    if (discrete) {
      discrete_scale("fill", paste0("lis_", palette), palette = pal, ...)
