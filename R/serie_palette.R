@@ -86,8 +86,9 @@ print.serie_palette <- function(x, ...) {
  #' function to personalize fill aesthetic
  #' 
  #' @export
+ 
  scale_fill_rseries <- function(palette_family = palette_netflyx, 
-                                palette  =  "Lupin" , 
+                                palette  =  Lupin , 
                                 discrete = TRUE, 
                                 reverse  = FALSE,
                                ...) {
