@@ -79,3 +79,5 @@ print.serie_palette <- function(x, ...) {
    inherits(x, "serie_palette")
  }
 
+ # 2. Palette Print Function
+ #::::::::::::::::::::::::::::::::::::::::

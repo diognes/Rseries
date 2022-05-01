@@ -1,4 +1,4 @@
-# 4.Create the color palettes
+# 5.Create the color palettes
 #::::::::::::::::::::::::::::::::::::::::::::::
 #' Complete list of palettes
 #'
