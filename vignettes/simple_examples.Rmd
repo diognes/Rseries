@@ -687,11 +687,11 @@ ggtitle('scale_fill_rseries()')
 
 ```{r}
 diamonds %>% 
-ggplot(aes(x = cut, fill = clarity)) +
+ggplot(aes(x = cut, color = clarity,fill=clarity)) +
 geom_bar() +
 scale_color_rseries()+
 theme_bw() +
-ggtitle('scale_fill_rseries()')
+ggtitle('scale_color_rseries()')
 ```
 
 
