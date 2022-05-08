@@ -18,7 +18,7 @@ output:
 knitr::opts_chunk$set(echo = TRUE,warning=FALSE,message=FALSE,fig.align="center")
 ```
 
-We can select two palettes at the moment: `palette_netflyx` and `palette_anime`. Each palette is a list of series. Each palette in this package have a total of 6 colors. With the function `serie_palette` we can select a palette following this entry:
+We can select two palette families at the moment: `palette_netflyx` and `palette_anime`. Each family is a list of palette from series. Each palette in this package have a total of 6 colors. With the function `serie_palette` we can select a palette following this entry:
 
 `serie_palette( enter name, palette of preference, number of colors, type discrete or continous )`
 
