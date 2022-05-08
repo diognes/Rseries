@@ -676,7 +676,7 @@ EuStockMarkets %>%
   mutate(time = rep(time(EuStockMarkets), 4)) %>% 
   ggplot()+
   geom_line(aes(color = index,x=time,y=price), size = 1) +
-  scale_color_rseries(palette = "Calamar")  +
+  scale_color_rseries(palette = "poke",palette_family = palette_anime)  +
   theme_minimal()
 ```
 
