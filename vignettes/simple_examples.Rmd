@@ -44,7 +44,7 @@ Let's see some examples using ggplot2 based on [the R Graph Gallery
 
 ---
 
-# Palette: Lupin
+# Palette: Lupin {.tabset}
 
 ## A classic boxplot
 
@@ -150,7 +150,7 @@ ggplot(DAT, aes(x=Year, y=Value, fill=Group )) +
 
 ---
 
-# Palette: bolt
+# Palette: bolt {.tabset}
 
 ## A classic boxplot
 
@@ -255,7 +255,7 @@ ggplot(DAT, aes(x=Year, y=Value, fill=Group )) +
 
 ---
 
-# Palette: poputepik
+# Palette: poputepik {.tabset}
 
 ## A classic boxplot
 
@@ -464,7 +464,7 @@ ggplot(DAT, aes(x=Year, y=Value, fill=Group )) +
 
 ---
 
-# Palette: yona
+# Palette: yona {.tabset}
 
 ## A classic boxplot
 
@@ -570,7 +570,7 @@ ggplot(DAT, aes(x=Year, y=Value, fill=Group )) +
 
 ---
 
-# Palette: cardcaptor
+# Palette: cardcaptor {.tabset}
 
 ## A classic boxplot
 
