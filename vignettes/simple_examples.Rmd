@@ -22,22 +22,6 @@ We can select two palettes at the moment: `palette_netflyx` and `palette_anime`.
 
 `serie_palette( enter name, palette of preference, number of colors, type discrete or continous )`
 
-Each palette estructure looks similar to this:
-
-```{r eval=F, class.source = 'fold-show'}
-# serie netflyx palettes color
-
-palette_netflyx <- list(
-  Lupin        = c("#E26A40","#0E263C","#3B6183","#5C85B1","#7BA0C6","#D9E2EC"),
-  
-  Ozark         =c("#a9d2d0","#62a7af","#4d8a9d","#2b6b76","#1c5758","#123b4c"),
-  
-  GambitoDama   =c("#291f2a","#634039","#916b58","#be754c","#9a4d1b","#824529"),
-  
-  EstamosMuert = c("#c9cacc","#96aea8","#465e69","#5d5e4d","#1c4b46","#8f4031")
-) 
-```
-
 Let's see some examples using ggplot2 based on [the R Graph Gallery
 ](https://r-graph-gallery.com/) examples.
 
