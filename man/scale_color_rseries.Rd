@@ -2,7 +2,7 @@
 % Please edit documentation in R/serie_palette.R
 \name{scale_color_rseries}
 \alias{scale_color_rseries}
-\title{function to personalize fill aesthetic}
+\title{function to personalize color aesthetic}
 \usage{
 scale_color_rseries(
   palette_family = palette_netflyx,
@@ -13,5 +13,5 @@ scale_color_rseries(
 )
 }
 \description{
-function to personalize fill aesthetic
+function to personalize color aesthetic
 }

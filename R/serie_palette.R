@@ -112,7 +112,7 @@ print.serie_palette <- function(x, ...) {
    # palette_family requires a function no a list of colors 
    # check reorganize the scale function to specify a better function for palettes
    # the output should be a funcion not a list of colors 
-   pal <- Rseries_pal(palette = palette ,palette_family = palette_netflyx) #, reverse = reverse
+   pal <- Rseries_pal(palette = palette ,palette_family = palette_family) #, reverse = reverse
    
    if (discrete) {
      discrete_scale("fill", paste0("serie_palette_", palette), palette = pal, ...)
@@ -133,7 +133,7 @@ print.serie_palette <- function(x, ...) {
                                 discrete = TRUE, 
                                 reverse = FALSE,
                                 ...) {
-   pal <- Rseries_pal(palette = palette ,palette_family = palette_netflyx)
+   pal <- Rseries_pal(palette = palette ,palette_family = palette_family)
    if (discrete) {
      discrete_scale("colour", paste0("lis_", palette), palette = pal, ...)
    }
