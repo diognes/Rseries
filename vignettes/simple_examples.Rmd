@@ -360,7 +360,7 @@ ggplot(DAT, aes(x=Year, y=Value, fill=Group )) +
 
 ---
 
-# Palette: tokyorev
+# Palette: tokyorev {.tabset}
 
 ## A classic boxplot
 
