@@ -2,7 +2,8 @@
 % Please edit documentation in R/serie_palette.R
 \name{Rseries_pal}
 \alias{Rseries_pal}
-\title{3. Return function to interpolate a Rseries color palette}
+\title{3. Return function to interpolate a Rseries color palette
+ palette color intepolate}
 \usage{
 Rseries_pal(
   palette = "Lupin",
@@ -11,13 +12,7 @@ Rseries_pal(
   ...
 )
 }
-\arguments{
-\item{palette}{Character name of palette in family Rserie palettes}
-
-\item{reverse}{Boolean indicating whether the palette should be reversed}
-
-\item{...}{Additional arguments to pass to colorRampPalette()}
-}
 \description{
 3. Return function to interpolate a Rseries color palette
+ palette color intepolate
 }

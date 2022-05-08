@@ -82,12 +82,10 @@ print.serie_palette <- function(x, ...) {
  
  
  #' 3. Return function to interpolate a Rseries color palette
- #'
- #' @param palette Character name of palette in family Rserie palettes
- #' @param reverse Boolean indicating whether the palette should be reversed
- #' @param ... Additional arguments to pass to colorRampPalette()
+ #::::::::::::::::::::::::::::::::::::::::
+ #'  palette color intepolate
  #' 
- #' @export Rserie_pal
+ #' @export 
  
    Rseries_pal <- function(palette        = "Lupin",
                           palette_family = palette_netflyx, 
