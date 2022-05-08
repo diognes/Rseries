@@ -686,12 +686,13 @@ ggtitle('scale_fill_rseries()')
 
 
 ```{r}
-diamonds %>% 
-ggplot(aes(x = cut, color = clarity,fill=clarity)) +
-geom_bar() +
-scale_color_rseries()+
-theme_bw() +
-ggtitle('scale_color_rseries()')
+  economics %>%
+  select(date, psavert, uempmed) %>%
+  gather(key = "variable", value = "value", -date) %>% 
+  ggplot(aes(x = date, y = value)) + 
+  geom_line(aes(color = variable), size = 1) +
+  scale_color_rseries()  +
+  theme_minimal()
 ```
 
 

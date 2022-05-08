@@ -81,9 +81,9 @@ print.serie_palette <- function(x, ...) {
  
  
  
- #' 3. Return function to interpolate a Rseries color palette
+ # 3. Return function to interpolate a Rseries color palette
  #::::::::::::::::::::::::::::::::::::::::
- #'  palette color intepolate
+ #'  palette color interpolate
  #' 
  #' @export 
  
@@ -124,7 +124,7 @@ print.serie_palette <- function(x, ...) {
  
  # 5. Color function 
  #::::::::::::::::::::::::::::::::::::::::
- #' function to personalize fill aesthetic
+ #' function to personalize color aesthetic
  #' 
  #' @export
  
