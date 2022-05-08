@@ -686,13 +686,14 @@ ggtitle('scale_fill_rseries()')
 
 
 ```{r}
-  economics %>%
-  select(date, psavert, uempmed) %>%
-  gather(key = "variable", value = "value", -date) %>% 
-  ggplot(aes(x = date, y = value)) + 
-  geom_line(aes(color = variable), size = 1) +
-  scale_color_rseries()  +
-  theme_minimal()
+    EuStockMarkets %>%
+    as.data.frame() %>%
+    gather(index, price) %>%
+    mutate(time = rep(time(EuStockMarkets), 4)) %>% 
+    ggplot()+
+    geom_line(aes(color = index,x=time,y=price), size = 1) +
+    scale_color_rseries()  +
+    theme_minimal()
 ```
 
 
