@@ -123,3 +123,24 @@ print.serie_palette <- function(x, ...) {
    }
  }
  
+ 
+ # 5. Color function 
+ #::::::::::::::::::::::::::::::::::::::::
+ #' function to personalize fill aesthetic
+ #' 
+ #' @export
+ 
+ scale_color_innova <- function(palette_family = palette_netflyx,
+                                palette = "Lupin", 
+                                discrete = TRUE, 
+                                reverse = FALSE,
+                                ...) {
+   pal <- Rseries_pal(palette = palette ,palette_family = palette_netflyx)
+   if (discrete) {
+     discrete_scale("colour", paste0("lis_", palette), palette = pal, ...)
+   }
+   else {
+     scale_color_gradientn(colours = pal(256), ...)
+   }
+ }
+ 

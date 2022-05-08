@@ -672,5 +672,16 @@ ggplot(DAT, aes(x=Year, y=Value, fill=Group )) +
 ```
 
 
+# Fill function  and color 
+
+```{r}
+diamonds %>% 
+ggplot(aes(x = cut, fill = clarity)) +
+geom_bar() +
+scale_fill_rseries()+
+theme_bw() +
+ggtitle('scale_fill_rseries()')
+```
+
 
 
