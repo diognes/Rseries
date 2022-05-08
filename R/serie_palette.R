@@ -128,7 +128,7 @@ print.serie_palette <- function(x, ...) {
  #' 
  #' @export
  
- scale_color_innova <- function(palette_family = palette_netflyx,
+ scale_color_rseries <- function(palette_family = palette_netflyx,
                                 palette = "Lupin", 
                                 discrete = TRUE, 
                                 reverse = FALSE,
