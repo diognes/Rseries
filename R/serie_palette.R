@@ -80,8 +80,27 @@ print.serie_palette <- function(x, ...) {
  }
  
  
+ 
+ #' 3. Return function to interpolate a Rseries color palette
+ #'
+ #' @param palette Character name of palette in family Rserie palettes
+ #' @param reverse Boolean indicating whether the palette should be reversed
+ #' @param ... Additional arguments to pass to colorRampPalette()
+ #' 
+ #' @export Rserie_pal
+ 
+   Rseries_pal <- function(palette        = "Lupin",
+                          palette_family = palette_netflyx, 
+                          reverse = FALSE, ...) {
+   pal <- palette_family[[palette]]
+   if (reverse) pal <- rev(pal)
+   colorRampPalette(pal,...)
+                                                }
+ 
+ 
+ 
 
- # 3. fill function 
+ # 4. fill function 
  #::::::::::::::::::::::::::::::::::::::::
  #' function to personalize fill aesthetic
  #' 
@@ -95,7 +114,7 @@ print.serie_palette <- function(x, ...) {
    # palette_family requires a function no a list of colors 
    # check reorganize the scale function to specify a better function for palettes
    # the output should be a funcion not a list of colors 
-   pal <- serie_palette(name = palette ,palette_family = palette_netflyx) #, reverse = reverse
+   pal <- Rseries_pal(palette = palette ,palette_family = palette_netflyx) #, reverse = reverse
    
    if (discrete) {
      discrete_scale("fill", paste0("serie_palette_", palette), palette = pal, ...)
