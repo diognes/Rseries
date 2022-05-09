@@ -6,8 +6,8 @@ output:
   html_document:
     code_folding: hide
     toc: true # table of content true
-    toc_depth: 3  # upto three depths of headings (specified by #, ## and ###)
-    number_sections: true  ## if you want number sections at each table header
+    toc_depth: 3  # upto three depths of headings (specified by #, ### and ####)
+    number_sections: true  ### if you want number sections at each table header
     # theme: united
     # highlight: tango  # specifies the syntax highlighting style
 ---
@@ -16,6 +16,7 @@ output:
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE,warning=FALSE,message=FALSE,fig.align="center")
+
 ```
 
 We can select two palette families at the moment: `palette_netflyx` and `palette_anime`. Each family is a list of palette from series. Each palette in this package have a total of 6 colors. With the function `serie_palette` we can select a palette following this entry:
@@ -28,17 +29,36 @@ Let's see some examples using ggplot2 based on [the R Graph Gallery
 
 ---
 
-# Palette: Lupin {.tabset}
+# Libraries
 
-## A classic boxplot
-
-
-```{r}
+```{r, class.source = 'fold-show'}
 # Libraries
 library(tidyverse)
 library(ggplot2)
 library(Rseries)
+```
 
+
+# palette_netflyx
+
+## Palette: Lupin {.tabset}
+
+### Some time series
+
+```{r}
+EuStockMarkets %>%
+  as.data.frame() %>%
+  gather(index, price) %>%
+  mutate(time = rep(time(EuStockMarkets), 4)) %>% 
+  ggplot() +
+  geom_line(aes(color = index,x=time,y=price), size = 1) +
+  scale_color_rseries(palette = "Lupin", palette_family = palette_netflyx) +
+  theme_minimal()
+```
+
+### A classic boxplot
+
+```{r}
 # create a dataset
 data <- data.frame(
   name=c( rep("A",500), rep("B",500), rep("B",500), rep("C",20), rep('D', 100)),
@@ -46,23 +66,21 @@ data <- data.frame(
 )
 
 # Plot
-pal=serie_palette("Lupin", palette_netflyx, 5)
-
 data %>%
   ggplot( aes(x=name, y=value, fill=name)) +
     geom_boxplot() +
-    scale_fill_manual(values=(pal)) +
+    scale_fill_rseries(palette_family = palette_netflyx, palette = "Lupin") +
     theme_classic() +
     theme(
       legend.position="none",
       plot.title = element_text(size=11)
     ) +
     ggtitle("A classic boxplot") +
-    xlab("")
+    xlab(" ")
 ```
 
 
-## Some density charts
+### Some density charts
 
 ```{r}
 # Libraries
@@ -70,26 +88,24 @@ library(tidyverse)
 library(ggplot2)
 library(Rseries)
 
-pal=serie_palette("Lupin", palette_netflyx, 5)
-
 # Using the diamods dataset we can some of the palettes in our package.
 
 # Multi density chart
 p1 <- ggplot(diamonds, aes(x=price,fill=cut))+
   geom_density(position='stack')+
-  scale_fill_manual(values=(pal))+
+      scale_fill_rseries(palette_family = palette_netflyx, palette = "Lupin") +
   theme_minimal()
 p1
 
 # Stacked density plot
 p2 <- ggplot(data=diamonds, aes(x=price, group=cut, fill=cut)) +
     geom_density(adjust=1.5, position="fill") +
-    scale_fill_manual(values=(pal)) +
+        scale_fill_rseries(palette_family = palette_netflyx, palette = "Lupin") +
     theme_minimal()
 p2
 ```
 
-## Some data art
+### Some data art
 
 ```{r}
 # Libraries
@@ -134,9 +150,24 @@ ggplot(DAT, aes(x=Year, y=Value, fill=Group )) +
 
 ---
 
-# Palette: bolt {.tabset}
+# palette_anime
 
-## A classic boxplot
+## Palette: bolt {.tabset}
+
+### Some time series
+
+```{r}
+EuStockMarkets %>%
+  as.data.frame() %>%
+  gather(index, price) %>%
+  mutate(time = rep(time(EuStockMarkets), 4)) %>% 
+  ggplot() +
+  geom_line(aes(color = index,x=time,y=price), size = 1) +
+  scale_color_rseries(palette = "bolt", palette_family = palette_anime) +
+  theme_minimal()
+```
+
+### A classic boxplot
 
 ```{r}
 # Libraries
@@ -151,12 +182,10 @@ data <- data.frame(
 )
 
 # Plot
-pal=serie_palette("bolt", palette_anime, 5)
-
 data %>%
   ggplot( aes(x=name, y=value, fill=name)) +
     geom_boxplot() +
-    scale_fill_manual(values=(pal)) +
+    scale_fill_rseries(palette_family = palette_anime, palette = "bolt") +
     theme_classic() +
     theme(
       legend.position="none",
@@ -167,7 +196,7 @@ data %>%
 ```
 
 
-## Some density charts
+### Some density charts
 
 ```{r}
 # Libraries
@@ -182,19 +211,19 @@ pal=serie_palette("bolt", palette_anime, 5)
 # Multi density chart
 p1 <- ggplot(diamonds, aes(x=price,fill=cut))+
   geom_density(position='stack')+
-  scale_fill_manual(values=(pal))+
+  scale_fill_rseries(palette_family = palette_anime, palette = "bolt") +
   theme_minimal()
 p1
 
 # Stacked density plot
 p2 <- ggplot(data=diamonds, aes(x=price, group=cut, fill=cut)) +
     geom_density(adjust=1.5, position="fill") +
-    scale_fill_manual(values=(pal)) +
+    scale_fill_rseries(palette_family = palette_anime, palette = "bolt") +
     theme_minimal()
 p2
 ```
 
-## Some data art
+### Some data art
 
 ```{r}
 # Libraries
@@ -239,9 +268,22 @@ ggplot(DAT, aes(x=Year, y=Value, fill=Group )) +
 
 ---
 
-# Palette: poputepik {.tabset}
+## Palette: poputepik {.tabset}
 
-## A classic boxplot
+### Some time series
+
+```{r}
+EuStockMarkets %>%
+  as.data.frame() %>%
+  gather(index, price) %>%
+  mutate(time = rep(time(EuStockMarkets), 4)) %>% 
+  ggplot() +
+  geom_line(aes(color = index,x=time,y=price), size = 1) +
+  scale_color_rseries(palette = "poputepik", palette_family = palette_anime) +
+  theme_minimal()
+```
+
+### A classic boxplot
 
 ```{r}
 # Libraries
@@ -272,7 +314,7 @@ data %>%
 ```
 
 
-## Some density charts
+### Some density charts
 
 ```{r}
 # Libraries
@@ -299,7 +341,7 @@ p2 <- ggplot(data=diamonds, aes(x=price, group=cut, fill=cut)) +
 p2
 ```
 
-## Some data art
+### Some data art
 
 ```{r}
 # Libraries
@@ -344,9 +386,22 @@ ggplot(DAT, aes(x=Year, y=Value, fill=Group )) +
 
 ---
 
-# Palette: tokyorev {.tabset}
+## Palette: tokyorev {.tabset}
 
-## A classic boxplot
+### Some time series
+
+```{r}
+EuStockMarkets %>%
+  as.data.frame() %>%
+  gather(index, price) %>%
+  mutate(time = rep(time(EuStockMarkets), 4)) %>% 
+  ggplot() +
+  geom_line(aes(color = index,x=time,y=price), size = 1) +
+  scale_color_rseries(palette = "tokyorev", palette_family = palette_anime) +
+  theme_minimal()
+```
+
+### A classic boxplot
 
 ```{r}
 # Libraries
@@ -377,7 +432,7 @@ data %>%
 ```
 
 
-## Some density charts
+### Some density charts
 
 ```{r}
 # Libraries
@@ -404,7 +459,7 @@ p2 <- ggplot(data=diamonds, aes(x=price, group=cut, fill=cut)) +
 p2
 ```
 
-## Some data art
+### Some data art
 
 ```{r}
 # Libraries
@@ -448,9 +503,22 @@ ggplot(DAT, aes(x=Year, y=Value, fill=Group )) +
 
 ---
 
-# Palette: yona {.tabset}
+## Palette: yona {.tabset}
 
-## A classic boxplot
+### Some time series
+
+```{r}
+EuStockMarkets %>%
+  as.data.frame() %>%
+  gather(index, price) %>%
+  mutate(time = rep(time(EuStockMarkets), 4)) %>% 
+  ggplot() +
+  geom_line(aes(color = index,x=time,y=price), size = 1) +
+  scale_color_rseries(palette = "yona", palette_family = palette_anime) +
+  theme_minimal()
+```
+
+### A classic boxplot
 
 ```{r}
 # Libraries
@@ -481,7 +549,7 @@ data %>%
 ```
 
 
-## Some density charts
+### Some density charts
 
 ```{r}
 # Libraries
@@ -508,7 +576,7 @@ p2 <- ggplot(data=diamonds, aes(x=price, group=cut, fill=cut)) +
 p2
 ```
 
-## Some data art
+### Some data art
 
 ```{r}
 # Libraries
@@ -554,9 +622,23 @@ ggplot(DAT, aes(x=Year, y=Value, fill=Group )) +
 
 ---
 
-# Palette: cardcaptor {.tabset}
+## Palette: cardcaptor {.tabset}
 
-## A classic boxplot
+### Some time series
+
+```{r}
+EuStockMarkets %>%
+  as.data.frame() %>%
+  gather(index, price) %>%
+  mutate(time = rep(time(EuStockMarkets), 4)) %>% 
+  ggplot() +
+  geom_line(aes(color = index,x=time,y=price), size = 1) +
+  scale_color_rseries(palette = "cardcaptor", palette_family = palette_anime) +
+  theme_minimal()
+```
+
+
+### A classic boxplot
 
 ```{r}
 # Libraries
@@ -587,7 +669,7 @@ data %>%
 ```
 
 
-## Some density charts
+### Some density charts
 
 ```{r}
 # Libraries
@@ -614,7 +696,7 @@ p2 <- ggplot(data=diamonds, aes(x=price, group=cut, fill=cut)) +
 p2
 ```
 
-## Some data art
+### Some data art
 
 ```{r}
 # Libraries
