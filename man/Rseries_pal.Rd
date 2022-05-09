@@ -2,8 +2,7 @@
 % Please edit documentation in R/serie_palette.R
 \name{Rseries_pal}
 \alias{Rseries_pal}
-\title{3. Return function to interpolate a Rseries color palette
- palette color intepolate}
+\title{palette color interpolate}
 \usage{
 Rseries_pal(
   palette = "Lupin",
@@ -13,6 +12,5 @@ Rseries_pal(
 )
 }
 \description{
-3. Return function to interpolate a Rseries color palette
- palette color intepolate
+palette color interpolate
 }
