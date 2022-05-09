@@ -20,6 +20,7 @@ knitr::opts_chunk$set(echo = TRUE,warning=FALSE,message=FALSE,fig.align="center"
 
 
 ## palette_netflyx
+
 ### lupin | Lupin
 <img src="../palette_pics/palette_netflyx/lupin.png">
 
