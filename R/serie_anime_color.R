@@ -52,7 +52,7 @@ palette_anime = list(
   
   # nichi = c("#7B9CC0", "#E8969A", "#C6737F", "#F2F2F2", "#F8E9C2", "#C2967D"), #6
   
-  yuru2 = c("#9F5C66", "#674D4A", "#F9F7F6", "#DCC4C2", "#6FB8E0", "#B4B5CA"), #6
+  # yuru2 = c("#9F5C66", "#674D4A", "#F9F7F6", "#DCC4C2", "#6FB8E0", "#B4B5CA"), #6
   
   tokyorev = c("#D81709", "#F7E39B", "#DEB279", "#FAE6CB", "#E74417", "#59221A"), #6
   
