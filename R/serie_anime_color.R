@@ -38,7 +38,7 @@ palette_anime = list(
   
   ggo = c("#D17F74", "#F4EBE2", "#832E43", "#E97798", "#563C47", "#BD9EAE"), #6
   
-  # naru = c("#264F94", "#993A42", "#E33329", "#E98352", "#EEC1BD", "#DFDE4E"), #6
+  naru = c("#264F94", "#993A42", "#E33329", "#E98352", "#EEC1BD", "#DFDE4E"), #6
   
   # narushi = c("#962940", "#AD613F", "#E6A14B", "#4496D2", "#85A86E", "#ECB9A6"), #6
   
@@ -46,13 +46,13 @@ palette_anime = list(
   
   yuri = c("#264268", "#62ABDB", "#A5E5FB", "#42C7C8", "#FEFEFE", "#849CBB"), #6
   
-  # hitman = c("#CE7368", "#FAD461", "#EBE7F6", "#DAC0F0", "#7585C1", "#564846"), #6
+  hitman = c("#CE7368", "#FAD461", "#EBE7F6", "#DAC0F0", "#7585C1", "#564846"), #6
   
-  # hataraku = c("#DA6557", "#C7C2C6", "#794B41", "#E6E7E5", "#99B1BF", "#CAEFF7"), #6
+  hataraku = c("#DA6557", "#C7C2C6", "#794B41", "#E6E7E5", "#99B1BF", "#CAEFF7"), #6
   
-  # nichi = c("#7B9CC0", "#E8969A", "#C6737F", "#F2F2F2", "#F8E9C2", "#C2967D"), #6
+  nichi = c("#7B9CC0", "#E8969A", "#C6737F", "#F2F2F2", "#F8E9C2", "#C2967D"), #6
   
-  # yuru2 = c("#9F5C66", "#674D4A", "#F9F7F6", "#DCC4C2", "#6FB8E0", "#B4B5CA"), #6
+  yuru2 = c("#9F5C66", "#674D4A", "#F9F7F6", "#DCC4C2", "#6FB8E0", "#B4B5CA"), #6
   
   tokyorev = c("#D81709", "#F7E39B", "#DEB279", "#FAE6CB", "#E74417", "#59221A"), #6
   
