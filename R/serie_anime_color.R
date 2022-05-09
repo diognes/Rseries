@@ -32,7 +32,7 @@ palette_anime = list(
   
   asobi = c("#B1C9CA", "#F3E4D3", "#CDBCAC", "#A1884D", "#D7E5A9", "#B1CB7A"), #6
   
-  sng = c("#37E4E3", "#118F83", "#A72B19", "#F25039", "#DC7E2A", "#E6C6A1"), #6
+  sng = c("#37E3E3", "#118F83", "#E6C6A0", "#83431D", "#F25039", "#A62B19"), #6
   
   # lakill = c("#534A5B", "#628591", "#926949", "#F9CDC2", "#E63E40", "#8E2021"), #6
   
@@ -44,7 +44,7 @@ palette_anime = list(
   
   bolt = c("#F2C3EB", "#543BFC", "#D95F9C", "#EAA85A", "#BB7EDE", "#FB7318"), #6
   
-  yuri = c("#264268", "#62ABDB", "#A5E5FB", "#FEFEFE", "#849CBB", "#42C7C8"), #6
+  yuri = c("#264268", "#62ABDB", "#A5E5FB", "#42C7C8", "#FEFEFE", "#849CBB"), #6
   
   # hitman = c("#CE7368", "#FAD461", "#EBE7F6", "#DAC0F0", "#7585C1", "#564846"), #6
   
@@ -58,8 +58,8 @@ palette_anime = list(
   
   yona = c("#734243", "#E6B2B0", "#AE4266", "#F6E1E4", "#C18C6C", "#D9CAD1"), #6
   
-  takt = c("#5FA1B1", "#727680", "#FBEFEF", "#C59EA6", "#C34B53", "#C5C3C1"), #6
-  
+  takt = c("#727681", "#FBEFEF", "#C34B54", "#DFAFBB", "#A27E5C", "#EEB987"), #6
+  # takt = c("#5FA1B1", "#727680", "#FBEFEF", "#C59EA6", "#C34B53", "#C5C3C1"), #6
   cardcaptor = c("#DD9D54", "#6E3327", "#97D0EA", "#EC494F", "#F8E1E7", "#FBCA67") #6
   
   # cardcaptor_clear = c("#3278CC", "#567EB7", "#E96388", "#E3B277", "#E9D9C3", "#F8F3F0"), #6
