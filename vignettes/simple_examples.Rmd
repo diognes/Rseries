@@ -15,7 +15,7 @@ output:
 # Brief explanation
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE,warning=FALSE,message=FALSE,fig.align="center")
+knitr::opts_chunk$set(echo = TRUE,warning=FALSE,message=FALSE,fig.align="center", dpi=300)
 
 ```
 
@@ -31,7 +31,7 @@ Let's see some examples using ggplot2 based on [the R Graph Gallery
 
 # Libraries
 
-```{r, class.source = 'fold-show'}
+```{r, echo = FALSE, class.source = 'fold-show'}
 # Libraries
 library(tidyverse)
 library(ggplot2)
