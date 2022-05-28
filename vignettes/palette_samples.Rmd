@@ -1,5 +1,5 @@
 ---
-title: "Palette samples"
+title: "Palettes in R series"
 author: "diognes"
 date: "`r format(Sys.time(), '%d/%m/%Y')`"
 output:
@@ -22,59 +22,134 @@ knitr::opts_chunk$set(echo = TRUE,warning=FALSE,message=FALSE,fig.align="center"
 ## palette_netflyx
 
 ### lupin | Lupin
-<img src="../palette_pics/palette_netflyx/lupin.png">
+
+```{r,message=F,warning=F,echo=F}
+knitr::include_graphics("./pics/lupin.png", dpi = 144)
+```
+
+
 
 ### GambitoDama | Gambito de dama
-<img src="../palette_pics/palette_netflyx/gambito_dama.png">
+
+```{r,message=F,warning=F,echo=F}
+knitr::include_graphics("./pics/gambito_dama.png", dpi = 144)
+```
+
 
 ### EstamosMuert | Estamos Muertos
-<img src="../palette_pics/palette_netflyx/estamos_muertos.png">
+
+```{r,message=F,warning=F,echo=F}
+knitr::include_graphics("./pics/estamos_muertos.png", dpi = 144)
+```
+
+
 
 ## palette_anime
 
 ### asobi | Asobi Asobase
-<img src="../palette_pics/palette_anime/asobi.png">
+
+```{r,message=F,warning=F,echo=F}
+knitr::include_graphics("./pics/asobi.png", dpi = 144)
+```
+
+
 
 ### bolt | Boruto
-<img src="../palette_pics/palette_anime/bolt.png">
+
+```{r,message=F,warning=F,echo=F}
+knitr::include_graphics("./pics/bolt.png", dpi = 144)
+```
+
 
 ### cardcaptor | Cardcaptor Sakura
-<img src="../palette_pics/palette_anime/cardcaptor.png">
+
+```{r,message=F,warning=F,echo=F}
+knitr::include_graphics("./pics/cardcaptor.png", dpi = 144)
+```
+
 
 ### ggo | SAO Alternative: Gun Game Online
-<img src="../palette_pics/palette_anime/ggo.png">
+
+```{r,message=F,warning=F,echo=F}
+knitr::include_graphics("./pics/ggo.png", dpi = 144)
+```
+
 
 ### hataraku | Cells at Work!
-<img src="../palette_pics/palette_anime/hataraku.png">
+
+```{r,message=F,warning=F,echo=F}
+knitr::include_graphics("./pics/hataraku.png", dpi = 144)
+```
+
 
 ### mobu2 | Mob Psycho 100 II
-<img src="../palette_pics/palette_anime/mobu2.png">
+
+```{r,message=F,warning=F,echo=F}
+knitr::include_graphics("./pics/mobu2.png", dpi = 144)
+```
+
 
 ### naru | Naruto
-<img src="../palette_pics/palette_anime/naru.png">
+
+```{r,message=F,warning=F,echo=F}
+knitr::include_graphics("./pics/naru.png", dpi = 144)
+```
+
 
 ### nichi | Nichijou
-<img src="../palette_pics/palette_anime/nichi.png">
+
+```{r,message=F,warning=F,echo=F}
+knitr::include_graphics("./pics/nichi.png", dpi = 144)
+```
+
 
 ### poputepik | Pop Team Epic
-<img src="../palette_pics/palette_anime/poputepik.png">
+
+```{r,message=F,warning=F,echo=F}
+knitr::include_graphics("./pics/poputepik.png", dpi = 144)
+```
+
 
 ### sng | Suisei no Gargantia
-<img src="../palette_pics/palette_anime/sng.png">
+
+```{r,message=F,warning=F,echo=F}
+knitr::include_graphics("./pics/sng.png", dpi = 144)
+```
+
 
 ### takt | Takt Op.Destiny
-<img src="../palette_pics/palette_anime/takt.png">
+
+```{r,message=F,warning=F,echo=F}
+knitr::include_graphics("./pics/takt.png", dpi = 144)
+```
+
 
 ### tokyorev | Tokyo Revengers
-<img src="../palette_pics/palette_anime/tokyorev.png">
+
+```{r,message=F,warning=F,echo=F}
+knitr::include_graphics("./pics/tokyorev.png", dpi = 144)
+```
+
 
 ### yona | Akatsuki no Yona
-<img src="../palette_pics/palette_anime/yona.png">
+
+```{r,message=F,warning=F,echo=F}
+knitr::include_graphics("./pics/yona.png", dpi = 144)
+```
+
 
 ### yuri | Yuri!!! on Ice
-<img src="../palette_pics/palette_anime/yuri.png">
+
+```{r,message=F,warning=F,echo=F}
+knitr::include_graphics("./pics/yuri.png", dpi = 144)
+```
+
 
 ### yuru2 | Yuru Camp△
-<img src="../palette_pics/palette_anime/yuru2.png">
+
+```{r,message=F,warning=F,echo=F}
+knitr::include_graphics("./pics/yuru2.png", dpi = 144)
+```
+
 
 
