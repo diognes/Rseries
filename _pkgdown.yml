@@ -3,3 +3,11 @@ template:
   bootstrap: 5
   bootswatch: sandstone
 
+navbar:
+  structure:
+    right: [website, github]
+  components:
+    website:
+      text: Diognes
+      href: https://github.com/diognes
+      aria-label: Personal website
