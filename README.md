@@ -1,4 +1,4 @@
-# `Rseries` Package  <img src="man/figures/logo.png" align="right" width="35%">
+# `Rseries`   <img src="man/figures/logo.png" align="right" width="35%">
 
 
 <!-- badges: start -->

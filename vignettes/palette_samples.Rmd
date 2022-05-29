@@ -1,7 +1,6 @@
 ---
 title: "Palettes in R series"
-author: "diognes"
-date: "`r format(Sys.time(), '%d/%m/%Y')`"
+author: "Diognes"
 output:
   html_document:
     code_folding: hide
@@ -14,14 +13,16 @@ output:
 
 # A showcase of some palettes
 
+Rseries contains beauty palettes to personalize plots with the style of series of  plataforms like Netflyx, Amazon Prime  or local TV from Latin American Countries. The avaliable palettes are : 
+
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE,warning=FALSE,message=FALSE,fig.align="center")
 ```
 
 
-## palette_netflyx
+## Netflyx family palettes 
 
-### lupin | Lupin
+#### `lupin` | Lupin
 
 ```{r,message=F,warning=F,echo=F}
 knitr::include_graphics("./pics/lupin.png", dpi = 144)
@@ -29,14 +30,14 @@ knitr::include_graphics("./pics/lupin.png", dpi = 144)
 
 
 
-### GambitoDama | Gambito de dama
+#### `GambitoDama` | Gambito de dama
 
 ```{r,message=F,warning=F,echo=F}
 knitr::include_graphics("./pics/gambito_dama.png", dpi = 144)
 ```
 
 
-### EstamosMuert | Estamos Muertos
+#### `EstamosMuert` | Estamos Muertos
 
 ```{r,message=F,warning=F,echo=F}
 knitr::include_graphics("./pics/estamos_muertos.png", dpi = 144)
@@ -44,9 +45,9 @@ knitr::include_graphics("./pics/estamos_muertos.png", dpi = 144)
 
 
 
-## palette_anime
+## Anime family palettes 
 
-### asobi | Asobi Asobase
+#### `asobi` | Asobi Asobase
 
 ```{r,message=F,warning=F,echo=F}
 knitr::include_graphics("./pics/asobi.png", dpi = 144)
@@ -54,98 +55,98 @@ knitr::include_graphics("./pics/asobi.png", dpi = 144)
 
 
 
-### bolt | Boruto
+#### `bolt` | Boruto
 
 ```{r,message=F,warning=F,echo=F}
 knitr::include_graphics("./pics/bolt.png", dpi = 144)
 ```
 
 
-### cardcaptor | Cardcaptor Sakura
+#### `cardcaptor` | Cardcaptor Sakura
 
 ```{r,message=F,warning=F,echo=F}
 knitr::include_graphics("./pics/cardcaptor.png", dpi = 144)
 ```
 
 
-### ggo | SAO Alternative: Gun Game Online
+#### `ggo` | SAO Alternative: Gun Game Online
 
 ```{r,message=F,warning=F,echo=F}
 knitr::include_graphics("./pics/ggo.png", dpi = 144)
 ```
 
 
-### hataraku | Cells at Work!
+#### `hataraku` | Cells at Work!
 
 ```{r,message=F,warning=F,echo=F}
 knitr::include_graphics("./pics/hataraku.png", dpi = 144)
 ```
 
 
-### mobu2 | Mob Psycho 100 II
+#### `mobu2` | Mob Psycho 100 II
 
 ```{r,message=F,warning=F,echo=F}
 knitr::include_graphics("./pics/mobu2.png", dpi = 144)
 ```
 
 
-### naru | Naruto
+#### `naru` | Naruto
 
 ```{r,message=F,warning=F,echo=F}
 knitr::include_graphics("./pics/naru.png", dpi = 144)
 ```
 
 
-### nichi | Nichijou
+#### `nichi` | Nichijou
 
 ```{r,message=F,warning=F,echo=F}
 knitr::include_graphics("./pics/nichi.png", dpi = 144)
 ```
 
 
-### poputepik | Pop Team Epic
+#### `poputepik` | Pop Team Epic
 
 ```{r,message=F,warning=F,echo=F}
 knitr::include_graphics("./pics/poputepik.png", dpi = 144)
 ```
 
 
-### sng | Suisei no Gargantia
+#### `sng` | Suisei no Gargantia
 
 ```{r,message=F,warning=F,echo=F}
 knitr::include_graphics("./pics/sng.png", dpi = 144)
 ```
 
 
-### takt | Takt Op.Destiny
+#### `takt` | Takt Op.Destiny
 
 ```{r,message=F,warning=F,echo=F}
 knitr::include_graphics("./pics/takt.png", dpi = 144)
 ```
 
 
-### tokyorev | Tokyo Revengers
+#### `tokyorev` | Tokyo Revengers
 
 ```{r,message=F,warning=F,echo=F}
 knitr::include_graphics("./pics/tokyorev.png", dpi = 144)
 ```
 
 
-### yona | Akatsuki no Yona
+#### `yona` | Akatsuki no Yona
 
 ```{r,message=F,warning=F,echo=F}
 knitr::include_graphics("./pics/yona.png", dpi = 144)
 ```
 
 
-### yuri | Yuri!!! on Ice
+#### `yuri` | Yuri!!! on Ice
 
 ```{r,message=F,warning=F,echo=F}
 knitr::include_graphics("./pics/yuri.png", dpi = 144)
 ```
 
 
-### yuru2 | Yuru Camp△
+#### `yuru2` | Yuru Camp△
 
 ```{r,message=F,warning=F,echo=F}
 knitr::include_graphics("./pics/yuru2.png", dpi = 144)

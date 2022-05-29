@@ -12,6 +12,8 @@ output:
     # highlight: tango  # specifies the syntax highlighting style
 ---
 
+This vignette contains some examples about the use of Rseries package. 
+
 # Brief explanation
 
 ```{r setup, include=FALSE}
