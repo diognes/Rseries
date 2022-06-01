@@ -82,7 +82,7 @@
       <img src="../logo.png" class="logo" alt=""><h1>Introduction to Rseries</h1>
                         <h4 data-toc-skip class="author">diognes</h4>
             
-            <h4 data-toc-skip class="date">29/05/2022</h4>
+            <h4 data-toc-skip class="date">31/05/2022</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/diognes/Rseries/blob/HEAD/vignettes/simple_examples.Rmd" class="external-link"><code>vignettes/simple_examples.Rmd</code></a></small>
       <div class="d-none name"><code>simple_examples.Rmd</code></div>
@@ -102,31 +102,36 @@
 <div class="section level2">
 <h2 id="libraries">Libraries<a class="anchor" aria-label="anchor" href="#libraries"></a>
 </h2>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co"># Libraries</span>
+<span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org" class="external-link">tidyverse</a></span><span class="op">)</span>
+<span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org" class="external-link">ggplot2</a></span><span class="op">)</span>
+<span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/diognes/Rseries" class="external-link">Rseries</a></span><span class="op">)</span></code></pre></div>
 </div>
 <div class="section level2">
-<h2 id="palette_netflyx">palette_netflyx<a class="anchor" aria-label="anchor" href="#palette_netflyx"></a>
+<h2 id="netflyx-palette-family">Netflyx palette family<a class="anchor" aria-label="anchor" href="#netflyx-palette-family"></a>
 </h2>
-<div class="section level3">
-<h3 class="tabset" id="palette-lupin">Palette: Lupin<a class="anchor" aria-label="anchor" href="#palette-lupin"></a>
-</h3>
 <div class="section level4">
-<h4 id="some-time-series">Some time series<a class="anchor" aria-label="anchor" href="#some-time-series"></a>
+<h4 class="tabset" id="palette-lupin">Palette: <code>Lupin</code><a class="anchor" aria-label="anchor" href="#palette-lupin"></a>
 </h4>
-<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">EuStockMarkets</span> <span class="op">%&gt;%</span>
-  <span class="fu"><a href="https://rdrr.io/r/base/as.data.frame.html" class="external-link">as.data.frame</a></span><span class="op">(</span><span class="op">)</span> <span class="op">%&gt;%</span>
-  <span class="fu">gather</span><span class="op">(</span><span class="va">index</span>, <span class="va">price</span><span class="op">)</span> <span class="op">%&gt;%</span>
-  <span class="fu">mutate</span><span class="op">(</span>time <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/time.html" class="external-link">time</a></span><span class="op">(</span><span class="va">EuStockMarkets</span><span class="op">)</span>, <span class="fl">4</span><span class="op">)</span><span class="op">)</span> <span class="op">%&gt;%</span> 
-  <span class="fu">ggplot</span><span class="op">(</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu">geom_line</span><span class="op">(</span><span class="fu">aes</span><span class="op">(</span>color <span class="op">=</span> <span class="va">index</span>,x<span class="op">=</span><span class="va">time</span>,y<span class="op">=</span><span class="va">price</span><span class="op">)</span>, size <span class="op">=</span> <span class="fl">1</span><span class="op">)</span> <span class="op">+</span>
+<div class="section level6">
+<h6 id="some-time-series">Some time series<a class="anchor" aria-label="anchor" href="#some-time-series"></a>
+</h6>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">EuStockMarkets</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span>
+  <span class="fu"><a href="https://rdrr.io/r/base/as.data.frame.html" class="external-link">as.data.frame</a></span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span>
+  <span class="fu"><a href="https://tidyr.tidyverse.org/reference/gather.html" class="external-link">gather</a></span><span class="op">(</span><span class="va">index</span>, <span class="va">price</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span>
+  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html" class="external-link">mutate</a></span><span class="op">(</span>time <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/time.html" class="external-link">time</a></span><span class="op">(</span><span class="va">EuStockMarkets</span><span class="op">)</span>, <span class="fl">4</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> 
+  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span>
+  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_path.html" class="external-link">geom_line</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>color <span class="op">=</span> <span class="va">index</span>,x<span class="op">=</span><span class="va">time</span>,y<span class="op">=</span><span class="va">price</span><span class="op">)</span>, size <span class="op">=</span> <span class="fl">1</span><span class="op">)</span> <span class="op">+</span>
   <span class="fu"><a href="../reference/scale_color_rseries.html">scale_color_rseries</a></span><span class="op">(</span>palette <span class="op">=</span> <span class="st">"Lupin"</span>, palette_family <span class="op">=</span> <span class="va">palette_netflyx</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu">theme_minimal</span><span class="op">(</span><span class="op">)</span></code></pre></div>
+  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html" class="external-link">theme_minimal</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
 <p><img src="simple_examples_files/figure-html/unnamed-chunk-2-1.png" width="2187.5" style="display: block; margin: auto;"></p>
 </div>
-<div class="section level4">
-<h4 id="a-classic-boxplot">A classic boxplot<a class="anchor" aria-label="anchor" href="#a-classic-boxplot"></a>
-</h4>
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<div class="section level6">
+<h6 id="a-classic-boxplot">A classic boxplot<a class="anchor" aria-label="anchor" href="#a-classic-boxplot"></a>
+</h6>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># create a dataset</span>
 <span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span>
   name<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span> <span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="st">"A"</span>,<span class="fl">500</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="st">"B"</span>,<span class="fl">500</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="st">"B"</span>,<span class="fl">500</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="st">"C"</span>,<span class="fl">20</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="st">'D'</span>, <span class="fl">100</span><span class="op">)</span><span class="op">)</span>,
@@ -134,23 +139,23 @@
 <span class="op">)</span>
 
 <span class="co"># Plot</span>
-<span class="va">data</span> <span class="op">%&gt;%</span>
-  <span class="fu">ggplot</span><span class="op">(</span> <span class="fu">aes</span><span class="op">(</span>x<span class="op">=</span><span class="va">name</span>, y<span class="op">=</span><span class="va">value</span>, fill<span class="op">=</span><span class="va">name</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
-    <span class="fu">geom_boxplot</span><span class="op">(</span><span class="op">)</span> <span class="op">+</span>
+<span class="va">data</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span>
+  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>x<span class="op">=</span><span class="va">name</span>, y<span class="op">=</span><span class="va">value</span>, fill<span class="op">=</span><span class="va">name</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
+    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_boxplot.html" class="external-link">geom_boxplot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span>
     <span class="fu"><a href="../reference/scale_fill_rseries.html">scale_fill_rseries</a></span><span class="op">(</span>palette_family <span class="op">=</span> <span class="va">palette_netflyx</span>, palette <span class="op">=</span> <span class="st">"Lupin"</span><span class="op">)</span> <span class="op">+</span>
-    <span class="fu">theme_classic</span><span class="op">(</span><span class="op">)</span> <span class="op">+</span>
-    <span class="fu">theme</span><span class="op">(</span>
+    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html" class="external-link">theme_classic</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span>
+    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html" class="external-link">theme</a></span><span class="op">(</span>
       legend.position<span class="op">=</span><span class="st">"none"</span>,
-      plot.title <span class="op">=</span> <span class="fu">element_text</span><span class="op">(</span>size<span class="op">=</span><span class="fl">11</span><span class="op">)</span>
+      plot.title <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html" class="external-link">element_text</a></span><span class="op">(</span>size<span class="op">=</span><span class="fl">11</span><span class="op">)</span>
     <span class="op">)</span> <span class="op">+</span>
-    <span class="fu">ggtitle</span><span class="op">(</span><span class="st">"A classic boxplot"</span><span class="op">)</span> <span class="op">+</span>
-    <span class="fu">xlab</span><span class="op">(</span><span class="st">" "</span><span class="op">)</span></code></pre></div>
+    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html" class="external-link">ggtitle</a></span><span class="op">(</span><span class="st">"A classic boxplot"</span><span class="op">)</span> <span class="op">+</span>
+    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html" class="external-link">xlab</a></span><span class="op">(</span><span class="st">" "</span><span class="op">)</span></code></pre></div>
 <p><img src="simple_examples_files/figure-html/unnamed-chunk-3-1.png" width="2187.5" style="display: block; margin: auto;"></p>
 </div>
-<div class="section level4">
-<h4 id="some-density-charts">Some density charts<a class="anchor" aria-label="anchor" href="#some-density-charts"></a>
-</h4>
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<div class="section level6">
+<h6 id="some-density-charts">Some density charts<a class="anchor" aria-label="anchor" href="#some-density-charts"></a>
+</h6>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># Libraries</span>
 <span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org" class="external-link">tidyverse</a></span><span class="op">)</span>
 <span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org" class="external-link">ggplot2</a></span><span class="op">)</span>
@@ -165,7 +170,7 @@
   <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html" class="external-link">theme_minimal</a></span><span class="op">(</span><span class="op">)</span>
 <span class="va">p1</span></code></pre></div>
 <p><img src="simple_examples_files/figure-html/unnamed-chunk-4-1.png" width="2187.5" style="display: block; margin: auto;"></p>
-<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># Stacked density plot</span>
 <span class="va">p2</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span>data<span class="op">=</span><span class="va">diamonds</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>x<span class="op">=</span><span class="va">price</span>, group<span class="op">=</span><span class="va">cut</span>, fill<span class="op">=</span><span class="va">cut</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
     <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_density.html" class="external-link">geom_density</a></span><span class="op">(</span>adjust<span class="op">=</span><span class="fl">1.5</span>, position<span class="op">=</span><span class="st">"fill"</span><span class="op">)</span> <span class="op">+</span>
@@ -174,10 +179,10 @@
 <span class="va">p2</span></code></pre></div>
 <p><img src="simple_examples_files/figure-html/unnamed-chunk-4-2.png" width="2187.5" style="display: block; margin: auto;"></p>
 </div>
-<div class="section level4">
-<h4 id="some-data-art">Some data art<a class="anchor" aria-label="anchor" href="#some-data-art"></a>
-</h4>
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<div class="section level6">
+<h6 id="some-data-art">Some data art<a class="anchor" aria-label="anchor" href="#some-data-art"></a>
+</h6>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># Libraries</span>
 <span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org" class="external-link">ggplot2</a></span><span class="op">)</span>
 <span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">RColorBrewer</span><span class="op">)</span>
@@ -216,138 +221,20 @@
     panel.background <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html" class="external-link">element_blank</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></code></pre></div>
 <p><img src="simple_examples_files/figure-html/unnamed-chunk-5-1.png" width="2187.5" style="display: block; margin: auto;"></p>
 <hr>
+<hr>
 </div>
 </div>
 </div>
 <div class="section level2">
-<h2 id="palette_anime">palette_anime<a class="anchor" aria-label="anchor" href="#palette_anime"></a>
+<h2 id="anime-palette-family">Anime palette family<a class="anchor" aria-label="anchor" href="#anime-palette-family"></a>
 </h2>
-<div class="section level3">
-<h3 class="tabset" id="palette-bolt">Palette: bolt<a class="anchor" aria-label="anchor" href="#palette-bolt"></a>
-</h3>
 <div class="section level4">
-<h4 id="some-time-series-1">Some time series<a class="anchor" aria-label="anchor" href="#some-time-series-1"></a>
+<h4 class="tabset" id="palette-poputepik">Palette: <code>poputepik</code><a class="anchor" aria-label="anchor" href="#palette-poputepik"></a>
 </h4>
-<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">EuStockMarkets</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span>
-  <span class="fu"><a href="https://rdrr.io/r/base/as.data.frame.html" class="external-link">as.data.frame</a></span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span>
-  <span class="fu"><a href="https://tidyr.tidyverse.org/reference/gather.html" class="external-link">gather</a></span><span class="op">(</span><span class="va">index</span>, <span class="va">price</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span>
-  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html" class="external-link">mutate</a></span><span class="op">(</span>time <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/time.html" class="external-link">time</a></span><span class="op">(</span><span class="va">EuStockMarkets</span><span class="op">)</span>, <span class="fl">4</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> 
-  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_path.html" class="external-link">geom_line</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>color <span class="op">=</span> <span class="va">index</span>,x<span class="op">=</span><span class="va">time</span>,y<span class="op">=</span><span class="va">price</span><span class="op">)</span>, size <span class="op">=</span> <span class="fl">1</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu"><a href="../reference/scale_color_rseries.html">scale_color_rseries</a></span><span class="op">(</span>palette <span class="op">=</span> <span class="st">"bolt"</span>, palette_family <span class="op">=</span> <span class="va">palette_anime</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html" class="external-link">theme_minimal</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
-<p><img src="simple_examples_files/figure-html/unnamed-chunk-6-1.png" width="2187.5" style="display: block; margin: auto;"></p>
-</div>
-<div class="section level4">
-<h4 id="a-classic-boxplot-1">A classic boxplot<a class="anchor" aria-label="anchor" href="#a-classic-boxplot-1"></a>
-</h4>
+<div class="section level6">
+<h6 id="some-time-series-1">Some time series<a class="anchor" aria-label="anchor" href="#some-time-series-1"></a>
+</h6>
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># Libraries</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org" class="external-link">tidyverse</a></span><span class="op">)</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org" class="external-link">ggplot2</a></span><span class="op">)</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/diognes/Rseries" class="external-link">Rseries</a></span><span class="op">)</span>
-
-<span class="co"># create a dataset</span>
-<span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span>
-  name<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span> <span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="st">"Mount Myōboku"</span>,<span class="fl">500</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="st">"Kirigakure"</span>,<span class="fl">500</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="st">"Kirigakure"</span>,<span class="fl">500</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="st">"Konohagakure"</span>,<span class="fl">20</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="st">'Sunagakure'</span>, <span class="fl">100</span><span class="op">)</span>  <span class="op">)</span>,
-  value<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html" class="external-link">rnorm</a></span><span class="op">(</span><span class="fl">500</span>, <span class="fl">10</span>, <span class="fl">5</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html" class="external-link">rnorm</a></span><span class="op">(</span><span class="fl">500</span>, <span class="fl">13</span>, <span class="fl">1</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html" class="external-link">rnorm</a></span><span class="op">(</span><span class="fl">500</span>, <span class="fl">18</span>, <span class="fl">1</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html" class="external-link">rnorm</a></span><span class="op">(</span><span class="fl">20</span>, <span class="fl">25</span>, <span class="fl">4</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html" class="external-link">rnorm</a></span><span class="op">(</span><span class="fl">100</span>, <span class="fl">12</span>, <span class="fl">1</span><span class="op">)</span> <span class="op">)</span>
-<span class="op">)</span>
-
-<span class="co"># Plot</span>
-<span class="va">data</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span>
-  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>x<span class="op">=</span><span class="va">name</span>, y<span class="op">=</span><span class="va">value</span>, fill<span class="op">=</span><span class="va">name</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
-    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_boxplot.html" class="external-link">geom_boxplot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span>
-    <span class="fu"><a href="../reference/scale_fill_rseries.html">scale_fill_rseries</a></span><span class="op">(</span>palette_family <span class="op">=</span> <span class="va">palette_anime</span>, palette <span class="op">=</span> <span class="st">"bolt"</span><span class="op">)</span> <span class="op">+</span>
-    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html" class="external-link">theme_classic</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span>
-    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html" class="external-link">theme</a></span><span class="op">(</span>
-      legend.position<span class="op">=</span><span class="st">"none"</span>,
-      plot.title <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html" class="external-link">element_text</a></span><span class="op">(</span>size<span class="op">=</span><span class="fl">11</span><span class="op">)</span>
-    <span class="op">)</span> <span class="op">+</span>
-    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html" class="external-link">ggtitle</a></span><span class="op">(</span><span class="st">"A classic boxplot"</span><span class="op">)</span> <span class="op">+</span>
-    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html" class="external-link">xlab</a></span><span class="op">(</span><span class="st">""</span><span class="op">)</span></code></pre></div>
-<p><img src="simple_examples_files/figure-html/unnamed-chunk-7-1.png" width="2187.5" style="display: block; margin: auto;"></p>
-</div>
-<div class="section level4">
-<h4 id="some-density-charts-1">Some density charts<a class="anchor" aria-label="anchor" href="#some-density-charts-1"></a>
-</h4>
-<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># Libraries</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org" class="external-link">tidyverse</a></span><span class="op">)</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org" class="external-link">ggplot2</a></span><span class="op">)</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/diognes/Rseries" class="external-link">Rseries</a></span><span class="op">)</span>
-
-<span class="va">pal</span><span class="op">=</span><span class="fu"><a href="../reference/serie_palette.html">serie_palette</a></span><span class="op">(</span><span class="st">"bolt"</span>, <span class="va">palette_anime</span>, <span class="fl">5</span><span class="op">)</span>
-
-<span class="co"># Using the diamods dataset we can some of the palettes in our package.</span>
-
-<span class="co"># Multi density chart</span>
-<span class="va">p1</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="va">diamonds</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>x<span class="op">=</span><span class="va">price</span>,fill<span class="op">=</span><span class="va">cut</span><span class="op">)</span><span class="op">)</span><span class="op">+</span>
-  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_density.html" class="external-link">geom_density</a></span><span class="op">(</span>position<span class="op">=</span><span class="st">'stack'</span><span class="op">)</span><span class="op">+</span>
-  <span class="fu"><a href="../reference/scale_fill_rseries.html">scale_fill_rseries</a></span><span class="op">(</span>palette_family <span class="op">=</span> <span class="va">palette_anime</span>, palette <span class="op">=</span> <span class="st">"bolt"</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html" class="external-link">theme_minimal</a></span><span class="op">(</span><span class="op">)</span>
-<span class="va">p1</span></code></pre></div>
-<p><img src="simple_examples_files/figure-html/unnamed-chunk-8-1.png" width="2187.5" style="display: block; margin: auto;"></p>
-<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># Stacked density plot</span>
-<span class="va">p2</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span>data<span class="op">=</span><span class="va">diamonds</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>x<span class="op">=</span><span class="va">price</span>, group<span class="op">=</span><span class="va">cut</span>, fill<span class="op">=</span><span class="va">cut</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
-    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_density.html" class="external-link">geom_density</a></span><span class="op">(</span>adjust<span class="op">=</span><span class="fl">1.5</span>, position<span class="op">=</span><span class="st">"fill"</span><span class="op">)</span> <span class="op">+</span>
-    <span class="fu"><a href="../reference/scale_fill_rseries.html">scale_fill_rseries</a></span><span class="op">(</span>palette_family <span class="op">=</span> <span class="va">palette_anime</span>, palette <span class="op">=</span> <span class="st">"bolt"</span><span class="op">)</span> <span class="op">+</span>
-    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html" class="external-link">theme_minimal</a></span><span class="op">(</span><span class="op">)</span>
-<span class="va">p2</span></code></pre></div>
-<p><img src="simple_examples_files/figure-html/unnamed-chunk-8-2.png" width="2187.5" style="display: block; margin: auto;"></p>
-</div>
-<div class="section level4">
-<h4 id="some-data-art-1">Some data art<a class="anchor" aria-label="anchor" href="#some-data-art-1"></a>
-</h4>
-<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># Libraries</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org" class="external-link">ggplot2</a></span><span class="op">)</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">RColorBrewer</span><span class="op">)</span>
-
-<span class="co"># create a dataset</span>
-<span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">345</span><span class="op">)</span>
-<span class="va">ngroup</span><span class="op">=</span><span class="fl">30</span>
-<span class="va">names</span><span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/paste.html" class="external-link">paste</a></span><span class="op">(</span><span class="st">"G_"</span>,<span class="fu"><a href="https://rdrr.io/r/base/seq.html" class="external-link">seq</a></span><span class="op">(</span><span class="fl">1</span>,<span class="va">ngroup</span><span class="op">)</span>,sep<span class="op">=</span><span class="st">""</span><span class="op">)</span>
-<span class="va">DAT</span><span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span><span class="op">)</span>
-
-<span class="kw">for</span><span class="op">(</span><span class="va">i</span> <span class="kw">in</span> <span class="fu"><a href="https://rdrr.io/r/base/seq.html" class="external-link">seq</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">30</span><span class="op">)</span><span class="op">)</span><span class="op">{</span>
-  <span class="va">data</span><span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html" class="external-link">matrix</a></span><span class="op">(</span><span class="fl">0</span>, <span class="va">ngroup</span> , <span class="fl">3</span><span class="op">)</span><span class="op">)</span>
-  <span class="va">data</span><span class="op">[</span>,<span class="fl">1</span><span class="op">]</span><span class="op">=</span><span class="va">i</span>
-  <span class="va">data</span><span class="op">[</span>,<span class="fl">2</span><span class="op">]</span><span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/sample.html" class="external-link">sample</a></span><span class="op">(</span><span class="va">names</span>, <span class="fu"><a href="https://rdrr.io/r/base/nrow.html" class="external-link">nrow</a></span><span class="op">(</span><span class="va">data</span><span class="op">)</span><span class="op">)</span>
-  <span class="va">data</span><span class="op">[</span>,<span class="fl">3</span><span class="op">]</span><span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/proportions.html" class="external-link">prop.table</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/sample.html" class="external-link">sample</a></span><span class="op">(</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="fl">0</span>,<span class="fl">113</span><span class="op">)</span>,<span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="va">ngroup</span><span class="op">)</span><span class="op">)</span> ,<span class="fu"><a href="https://rdrr.io/r/base/nrow.html" class="external-link">nrow</a></span><span class="op">(</span><span class="va">data</span><span class="op">)</span><span class="op">)</span><span class="op">)</span>
-  <span class="va">DAT</span><span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/cbind.html" class="external-link">rbind</a></span><span class="op">(</span><span class="va">DAT</span>,<span class="va">data</span><span class="op">)</span>
-<span class="op">}</span>
-<span class="fu"><a href="https://rdrr.io/r/base/colnames.html" class="external-link">colnames</a></span><span class="op">(</span><span class="va">DAT</span><span class="op">)</span><span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Year"</span>,<span class="st">"Group"</span>,<span class="st">"Value"</span><span class="op">)</span>
-<span class="va">DAT</span><span class="op">=</span><span class="va">DAT</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/order.html" class="external-link">order</a></span><span class="op">(</span> <span class="va">DAT</span><span class="op">$</span><span class="va">Year</span>, <span class="va">DAT</span><span class="op">$</span><span class="va">Group</span><span class="op">)</span> , <span class="op">]</span>
-
-<span class="co"># plot</span>
-<span class="va">pal</span> <span class="op">=</span> <span class="fu"><a href="../reference/serie_palette.html">serie_palette</a></span><span class="op">(</span><span class="st">"bolt"</span>, <span class="va">palette_anime</span>, <span class="fl">6</span><span class="op">)</span>
-<span class="va">pal</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/grDevices/colorRamp.html" class="external-link">colorRampPalette</a></span><span class="op">(</span><span class="va">pal</span><span class="op">)</span><span class="op">(</span><span class="va">ngroup</span><span class="op">)</span>
-<span class="va">pal</span><span class="op">=</span><span class="va">pal</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/sample.html" class="external-link">sample</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fu"><a href="https://rdrr.io/r/base/length.html" class="external-link">length</a></span><span class="op">(</span><span class="va">pal</span><span class="op">)</span><span class="op">)</span> , size<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/length.html" class="external-link">length</a></span><span class="op">(</span><span class="va">pal</span><span class="op">)</span> <span class="op">)</span> <span class="op">]</span>
-
-<span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="va">DAT</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>x<span class="op">=</span><span class="va">Year</span>, y<span class="op">=</span><span class="va">Value</span>, fill<span class="op">=</span><span class="va">Group</span> <span class="op">)</span><span class="op">)</span> <span class="op">+</span> 
-  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_ribbon.html" class="external-link">geom_area</a></span><span class="op">(</span>alpha<span class="op">=</span><span class="fl">1</span><span class="op">)</span><span class="op">+</span>
-  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html" class="external-link">theme_bw</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_manual.html" class="external-link">scale_fill_manual</a></span><span class="op">(</span>values <span class="op">=</span> <span class="va">pal</span><span class="op">)</span><span class="op">+</span>
-  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html" class="external-link">theme</a></span><span class="op">(</span>
-    text <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html" class="external-link">element_blank</a></span><span class="op">(</span><span class="op">)</span>,
-    line <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html" class="external-link">element_blank</a></span><span class="op">(</span><span class="op">)</span>,
-    title <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html" class="external-link">element_blank</a></span><span class="op">(</span><span class="op">)</span>,
-    legend.position<span class="op">=</span><span class="st">"none"</span>,
-    panel.border <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html" class="external-link">element_blank</a></span><span class="op">(</span><span class="op">)</span>,
-    panel.background <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html" class="external-link">element_blank</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></code></pre></div>
-<p><img src="simple_examples_files/figure-html/unnamed-chunk-9-1.png" width="2187.5" style="display: block; margin: auto;"></p>
-<hr>
-</div>
-</div>
-<div class="section level3">
-<h3 class="tabset" id="palette-poputepik">Palette: poputepik<a class="anchor" aria-label="anchor" href="#palette-poputepik"></a>
-</h3>
-<div class="section level4">
-<h4 id="some-time-series-2">Some time series<a class="anchor" aria-label="anchor" href="#some-time-series-2"></a>
-</h4>
-<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">EuStockMarkets</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span>
   <span class="fu"><a href="https://rdrr.io/r/base/as.data.frame.html" class="external-link">as.data.frame</a></span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span>
   <span class="fu"><a href="https://tidyr.tidyverse.org/reference/gather.html" class="external-link">gather</a></span><span class="op">(</span><span class="va">index</span>, <span class="va">price</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span>
@@ -356,12 +243,12 @@
   <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_path.html" class="external-link">geom_line</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>color <span class="op">=</span> <span class="va">index</span>,x<span class="op">=</span><span class="va">time</span>,y<span class="op">=</span><span class="va">price</span><span class="op">)</span>, size <span class="op">=</span> <span class="fl">1</span><span class="op">)</span> <span class="op">+</span>
   <span class="fu"><a href="../reference/scale_color_rseries.html">scale_color_rseries</a></span><span class="op">(</span>palette <span class="op">=</span> <span class="st">"poputepik"</span>, palette_family <span class="op">=</span> <span class="va">palette_anime</span><span class="op">)</span> <span class="op">+</span>
   <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html" class="external-link">theme_minimal</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
-<p><img src="simple_examples_files/figure-html/unnamed-chunk-10-1.png" width="2187.5" style="display: block; margin: auto;"></p>
+<p><img src="simple_examples_files/figure-html/unnamed-chunk-6-1.png" width="2187.5" style="display: block; margin: auto;"></p>
 </div>
-<div class="section level4">
-<h4 id="a-classic-boxplot-2">A classic boxplot<a class="anchor" aria-label="anchor" href="#a-classic-boxplot-2"></a>
-</h4>
-<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
+<div class="section level6">
+<h6 id="a-classic-boxplot-1">A classic boxplot<a class="anchor" aria-label="anchor" href="#a-classic-boxplot-1"></a>
+</h6>
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># Libraries</span>
 <span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org" class="external-link">tidyverse</a></span><span class="op">)</span>
 <span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org" class="external-link">ggplot2</a></span><span class="op">)</span>
@@ -387,12 +274,12 @@
     <span class="op">)</span> <span class="op">+</span>
     <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html" class="external-link">ggtitle</a></span><span class="op">(</span><span class="st">"A classic boxplot"</span><span class="op">)</span> <span class="op">+</span>
     <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html" class="external-link">xlab</a></span><span class="op">(</span><span class="st">""</span><span class="op">)</span></code></pre></div>
-<p><img src="simple_examples_files/figure-html/unnamed-chunk-11-1.png" width="2187.5" style="display: block; margin: auto;"></p>
+<p><img src="simple_examples_files/figure-html/unnamed-chunk-7-1.png" width="2187.5" style="display: block; margin: auto;"></p>
 </div>
-<div class="section level4">
-<h4 id="some-density-charts-2">Some density charts<a class="anchor" aria-label="anchor" href="#some-density-charts-2"></a>
-</h4>
-<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
+<div class="section level6">
+<h6 id="some-density-charts-1">Some density charts<a class="anchor" aria-label="anchor" href="#some-density-charts-1"></a>
+</h6>
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># Libraries</span>
 <span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org" class="external-link">tidyverse</a></span><span class="op">)</span>
 <span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org" class="external-link">ggplot2</a></span><span class="op">)</span>
@@ -408,20 +295,20 @@
   <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_manual.html" class="external-link">scale_fill_manual</a></span><span class="op">(</span>values<span class="op">=</span><span class="op">(</span><span class="va">pal</span><span class="op">)</span><span class="op">)</span><span class="op">+</span>
   <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html" class="external-link">theme_minimal</a></span><span class="op">(</span><span class="op">)</span>
 <span class="va">p1</span></code></pre></div>
-<p><img src="simple_examples_files/figure-html/unnamed-chunk-12-1.png" width="2187.5" style="display: block; margin: auto;"></p>
-<div class="sourceCode" id="cb14"><pre class="downlit sourceCode r">
+<p><img src="simple_examples_files/figure-html/unnamed-chunk-8-1.png" width="2187.5" style="display: block; margin: auto;"></p>
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># Stacked density plot</span>
 <span class="va">p2</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span>data<span class="op">=</span><span class="va">diamonds</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>x<span class="op">=</span><span class="va">price</span>, group<span class="op">=</span><span class="va">cut</span>, fill<span class="op">=</span><span class="va">cut</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
     <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_density.html" class="external-link">geom_density</a></span><span class="op">(</span>adjust<span class="op">=</span><span class="fl">1.5</span>, position<span class="op">=</span><span class="st">"fill"</span><span class="op">)</span> <span class="op">+</span>
     <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_manual.html" class="external-link">scale_fill_manual</a></span><span class="op">(</span>values<span class="op">=</span><span class="op">(</span><span class="va">pal</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
     <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html" class="external-link">theme_minimal</a></span><span class="op">(</span><span class="op">)</span>
 <span class="va">p2</span></code></pre></div>
-<p><img src="simple_examples_files/figure-html/unnamed-chunk-12-2.png" width="2187.5" style="display: block; margin: auto;"></p>
+<p><img src="simple_examples_files/figure-html/unnamed-chunk-8-2.png" width="2187.5" style="display: block; margin: auto;"></p>
 </div>
-<div class="section level4">
-<h4 id="some-data-art-2">Some data art<a class="anchor" aria-label="anchor" href="#some-data-art-2"></a>
-</h4>
-<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r">
+<div class="section level6">
+<h6 id="some-data-art-1">Some data art<a class="anchor" aria-label="anchor" href="#some-data-art-1"></a>
+</h6>
+<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># Libraries</span>
 <span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org" class="external-link">ggplot2</a></span><span class="op">)</span>
 <span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">RColorBrewer</span><span class="op">)</span>
@@ -458,17 +345,17 @@
     legend.position<span class="op">=</span><span class="st">"none"</span>,
     panel.border <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html" class="external-link">element_blank</a></span><span class="op">(</span><span class="op">)</span>,
     panel.background <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html" class="external-link">element_blank</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></code></pre></div>
-<p><img src="simple_examples_files/figure-html/unnamed-chunk-13-1.png" width="2187.5" style="display: block; margin: auto;"></p>
+<p><img src="simple_examples_files/figure-html/unnamed-chunk-9-1.png" width="2187.5" style="display: block; margin: auto;"></p>
 <hr>
 </div>
 </div>
-<div class="section level3">
-<h3 class="tabset" id="palette-tokyorev">Palette: tokyorev<a class="anchor" aria-label="anchor" href="#palette-tokyorev"></a>
-</h3>
 <div class="section level4">
-<h4 id="some-time-series-3">Some time series<a class="anchor" aria-label="anchor" href="#some-time-series-3"></a>
+<h4 class="tabset" id="palette-tokyorev">Palette: <code>tokyorev</code><a class="anchor" aria-label="anchor" href="#palette-tokyorev"></a>
 </h4>
-<div class="sourceCode" id="cb16"><pre class="downlit sourceCode r">
+<div class="section level6">
+<h6 id="some-time-series-2">Some time series<a class="anchor" aria-label="anchor" href="#some-time-series-2"></a>
+</h6>
+<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">EuStockMarkets</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span>
   <span class="fu"><a href="https://rdrr.io/r/base/as.data.frame.html" class="external-link">as.data.frame</a></span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span>
   <span class="fu"><a href="https://tidyr.tidyverse.org/reference/gather.html" class="external-link">gather</a></span><span class="op">(</span><span class="va">index</span>, <span class="va">price</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span>
@@ -477,12 +364,12 @@
   <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_path.html" class="external-link">geom_line</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>color <span class="op">=</span> <span class="va">index</span>,x<span class="op">=</span><span class="va">time</span>,y<span class="op">=</span><span class="va">price</span><span class="op">)</span>, size <span class="op">=</span> <span class="fl">1</span><span class="op">)</span> <span class="op">+</span>
   <span class="fu"><a href="../reference/scale_color_rseries.html">scale_color_rseries</a></span><span class="op">(</span>palette <span class="op">=</span> <span class="st">"tokyorev"</span>, palette_family <span class="op">=</span> <span class="va">palette_anime</span><span class="op">)</span> <span class="op">+</span>
   <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html" class="external-link">theme_minimal</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
-<p><img src="simple_examples_files/figure-html/unnamed-chunk-14-1.png" width="2187.5" style="display: block; margin: auto;"></p>
+<p><img src="simple_examples_files/figure-html/unnamed-chunk-10-1.png" width="2187.5" style="display: block; margin: auto;"></p>
 </div>
-<div class="section level4">
-<h4 id="a-classic-boxplot-3">A classic boxplot<a class="anchor" aria-label="anchor" href="#a-classic-boxplot-3"></a>
-</h4>
-<div class="sourceCode" id="cb17"><pre class="downlit sourceCode r">
+<div class="section level6">
+<h6 id="a-classic-boxplot-2">A classic boxplot<a class="anchor" aria-label="anchor" href="#a-classic-boxplot-2"></a>
+</h6>
+<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># Libraries</span>
 <span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org" class="external-link">tidyverse</a></span><span class="op">)</span>
 <span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org" class="external-link">ggplot2</a></span><span class="op">)</span>
@@ -508,12 +395,12 @@
     <span class="op">)</span> <span class="op">+</span>
     <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html" class="external-link">ggtitle</a></span><span class="op">(</span><span class="st">"A classic boxplot"</span><span class="op">)</span> <span class="op">+</span>
     <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html" class="external-link">xlab</a></span><span class="op">(</span><span class="st">""</span><span class="op">)</span></code></pre></div>
-<p><img src="simple_examples_files/figure-html/unnamed-chunk-15-1.png" width="2187.5" style="display: block; margin: auto;"></p>
+<p><img src="simple_examples_files/figure-html/unnamed-chunk-11-1.png" width="2187.5" style="display: block; margin: auto;"></p>
 </div>
-<div class="section level4">
-<h4 id="some-density-charts-3">Some density charts<a class="anchor" aria-label="anchor" href="#some-density-charts-3"></a>
-</h4>
-<div class="sourceCode" id="cb18"><pre class="downlit sourceCode r">
+<div class="section level6">
+<h6 id="some-density-charts-2">Some density charts<a class="anchor" aria-label="anchor" href="#some-density-charts-2"></a>
+</h6>
+<div class="sourceCode" id="cb14"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># Libraries</span>
 <span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org" class="external-link">tidyverse</a></span><span class="op">)</span>
 <span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org" class="external-link">ggplot2</a></span><span class="op">)</span>
@@ -529,20 +416,20 @@
   <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_manual.html" class="external-link">scale_fill_manual</a></span><span class="op">(</span>values<span class="op">=</span><span class="op">(</span><span class="va">pal</span><span class="op">)</span><span class="op">)</span><span class="op">+</span>
   <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html" class="external-link">theme_minimal</a></span><span class="op">(</span><span class="op">)</span>
 <span class="va">p1</span></code></pre></div>
-<p><img src="simple_examples_files/figure-html/unnamed-chunk-16-1.png" width="2187.5" style="display: block; margin: auto;"></p>
-<div class="sourceCode" id="cb19"><pre class="downlit sourceCode r">
+<p><img src="simple_examples_files/figure-html/unnamed-chunk-12-1.png" width="2187.5" style="display: block; margin: auto;"></p>
+<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># Stacked density plot</span>
 <span class="va">p2</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span>data<span class="op">=</span><span class="va">diamonds</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>x<span class="op">=</span><span class="va">price</span>, group<span class="op">=</span><span class="va">cut</span>, fill<span class="op">=</span><span class="va">cut</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
     <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_density.html" class="external-link">geom_density</a></span><span class="op">(</span>adjust<span class="op">=</span><span class="fl">1.5</span>, position<span class="op">=</span><span class="st">"fill"</span><span class="op">)</span> <span class="op">+</span>
     <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_manual.html" class="external-link">scale_fill_manual</a></span><span class="op">(</span>values<span class="op">=</span><span class="op">(</span><span class="va">pal</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
     <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html" class="external-link">theme_minimal</a></span><span class="op">(</span><span class="op">)</span>
 <span class="va">p2</span></code></pre></div>
-<p><img src="simple_examples_files/figure-html/unnamed-chunk-16-2.png" width="2187.5" style="display: block; margin: auto;"></p>
+<p><img src="simple_examples_files/figure-html/unnamed-chunk-12-2.png" width="2187.5" style="display: block; margin: auto;"></p>
 </div>
-<div class="section level4">
-<h4 id="some-data-art-3">Some data art<a class="anchor" aria-label="anchor" href="#some-data-art-3"></a>
-</h4>
-<div class="sourceCode" id="cb20"><pre class="downlit sourceCode r">
+<div class="section level6">
+<h6 id="some-data-art-2">Some data art<a class="anchor" aria-label="anchor" href="#some-data-art-2"></a>
+</h6>
+<div class="sourceCode" id="cb16"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># Libraries</span>
 <span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org" class="external-link">ggplot2</a></span><span class="op">)</span>
 <span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">RColorBrewer</span><span class="op">)</span>
@@ -579,17 +466,17 @@
     legend.position<span class="op">=</span><span class="st">"none"</span>,
     panel.border <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html" class="external-link">element_blank</a></span><span class="op">(</span><span class="op">)</span>,
     panel.background <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html" class="external-link">element_blank</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></code></pre></div>
-<p><img src="simple_examples_files/figure-html/unnamed-chunk-17-1.png" width="2187.5" style="display: block; margin: auto;"></p>
+<p><img src="simple_examples_files/figure-html/unnamed-chunk-13-1.png" width="2187.5" style="display: block; margin: auto;"></p>
 <hr>
 </div>
 </div>
-<div class="section level3">
-<h3 class="tabset" id="palette-yona">Palette: yona<a class="anchor" aria-label="anchor" href="#palette-yona"></a>
-</h3>
 <div class="section level4">
-<h4 id="some-time-series-4">Some time series<a class="anchor" aria-label="anchor" href="#some-time-series-4"></a>
+<h4 class="tabset" id="palette-yona">Palette: <code>yona</code><a class="anchor" aria-label="anchor" href="#palette-yona"></a>
 </h4>
-<div class="sourceCode" id="cb21"><pre class="downlit sourceCode r">
+<div class="section level6">
+<h6 id="some-time-series-3">Some time series<a class="anchor" aria-label="anchor" href="#some-time-series-3"></a>
+</h6>
+<div class="sourceCode" id="cb17"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">EuStockMarkets</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span>
   <span class="fu"><a href="https://rdrr.io/r/base/as.data.frame.html" class="external-link">as.data.frame</a></span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span>
   <span class="fu"><a href="https://tidyr.tidyverse.org/reference/gather.html" class="external-link">gather</a></span><span class="op">(</span><span class="va">index</span>, <span class="va">price</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span>
@@ -598,12 +485,12 @@
   <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_path.html" class="external-link">geom_line</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>color <span class="op">=</span> <span class="va">index</span>,x<span class="op">=</span><span class="va">time</span>,y<span class="op">=</span><span class="va">price</span><span class="op">)</span>, size <span class="op">=</span> <span class="fl">1</span><span class="op">)</span> <span class="op">+</span>
   <span class="fu"><a href="../reference/scale_color_rseries.html">scale_color_rseries</a></span><span class="op">(</span>palette <span class="op">=</span> <span class="st">"yona"</span>, palette_family <span class="op">=</span> <span class="va">palette_anime</span><span class="op">)</span> <span class="op">+</span>
   <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html" class="external-link">theme_minimal</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
-<p><img src="simple_examples_files/figure-html/unnamed-chunk-18-1.png" width="2187.5" style="display: block; margin: auto;"></p>
+<p><img src="simple_examples_files/figure-html/unnamed-chunk-14-1.png" width="2187.5" style="display: block; margin: auto;"></p>
 </div>
-<div class="section level4">
-<h4 id="a-classic-boxplot-4">A classic boxplot<a class="anchor" aria-label="anchor" href="#a-classic-boxplot-4"></a>
-</h4>
-<div class="sourceCode" id="cb22"><pre class="downlit sourceCode r">
+<div class="section level6">
+<h6 id="a-classic-boxplot-3">A classic boxplot<a class="anchor" aria-label="anchor" href="#a-classic-boxplot-3"></a>
+</h6>
+<div class="sourceCode" id="cb18"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># Libraries</span>
 <span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org" class="external-link">tidyverse</a></span><span class="op">)</span>
 <span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org" class="external-link">ggplot2</a></span><span class="op">)</span>
@@ -629,12 +516,12 @@
     <span class="op">)</span> <span class="op">+</span>
     <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html" class="external-link">ggtitle</a></span><span class="op">(</span><span class="st">"A classic boxplot"</span><span class="op">)</span> <span class="op">+</span>
     <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html" class="external-link">xlab</a></span><span class="op">(</span><span class="st">""</span><span class="op">)</span></code></pre></div>
-<p><img src="simple_examples_files/figure-html/unnamed-chunk-19-1.png" width="2187.5" style="display: block; margin: auto;"></p>
+<p><img src="simple_examples_files/figure-html/unnamed-chunk-15-1.png" width="2187.5" style="display: block; margin: auto;"></p>
 </div>
-<div class="section level4">
-<h4 id="some-density-charts-4">Some density charts<a class="anchor" aria-label="anchor" href="#some-density-charts-4"></a>
-</h4>
-<div class="sourceCode" id="cb23"><pre class="downlit sourceCode r">
+<div class="section level6">
+<h6 id="some-density-charts-3">Some density charts<a class="anchor" aria-label="anchor" href="#some-density-charts-3"></a>
+</h6>
+<div class="sourceCode" id="cb19"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># Libraries</span>
 <span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org" class="external-link">tidyverse</a></span><span class="op">)</span>
 <span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org" class="external-link">ggplot2</a></span><span class="op">)</span>
@@ -650,20 +537,20 @@
   <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_manual.html" class="external-link">scale_fill_manual</a></span><span class="op">(</span>values<span class="op">=</span><span class="op">(</span><span class="va">pal</span><span class="op">)</span><span class="op">)</span><span class="op">+</span>
   <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html" class="external-link">theme_minimal</a></span><span class="op">(</span><span class="op">)</span>
 <span class="va">p1</span></code></pre></div>
-<p><img src="simple_examples_files/figure-html/unnamed-chunk-20-1.png" width="2187.5" style="display: block; margin: auto;"></p>
-<div class="sourceCode" id="cb24"><pre class="downlit sourceCode r">
+<p><img src="simple_examples_files/figure-html/unnamed-chunk-16-1.png" width="2187.5" style="display: block; margin: auto;"></p>
+<div class="sourceCode" id="cb20"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># Stacked density plot</span>
 <span class="va">p2</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span>data<span class="op">=</span><span class="va">diamonds</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>x<span class="op">=</span><span class="va">price</span>, group<span class="op">=</span><span class="va">cut</span>, fill<span class="op">=</span><span class="va">cut</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
     <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_density.html" class="external-link">geom_density</a></span><span class="op">(</span>adjust<span class="op">=</span><span class="fl">1.5</span>, position<span class="op">=</span><span class="st">"fill"</span><span class="op">)</span> <span class="op">+</span>
     <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_manual.html" class="external-link">scale_fill_manual</a></span><span class="op">(</span>values<span class="op">=</span><span class="op">(</span><span class="va">pal</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
     <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html" class="external-link">theme_minimal</a></span><span class="op">(</span><span class="op">)</span>
 <span class="va">p2</span></code></pre></div>
-<p><img src="simple_examples_files/figure-html/unnamed-chunk-20-2.png" width="2187.5" style="display: block; margin: auto;"></p>
+<p><img src="simple_examples_files/figure-html/unnamed-chunk-16-2.png" width="2187.5" style="display: block; margin: auto;"></p>
 </div>
-<div class="section level4">
-<h4 id="some-data-art-4">Some data art<a class="anchor" aria-label="anchor" href="#some-data-art-4"></a>
-</h4>
-<div class="sourceCode" id="cb25"><pre class="downlit sourceCode r">
+<div class="section level6">
+<h6 id="some-data-art-3">Some data art<a class="anchor" aria-label="anchor" href="#some-data-art-3"></a>
+</h6>
+<div class="sourceCode" id="cb21"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># Libraries</span>
 <span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org" class="external-link">ggplot2</a></span><span class="op">)</span>
 <span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">RColorBrewer</span><span class="op">)</span>
@@ -700,143 +587,23 @@
     legend.position<span class="op">=</span><span class="st">"none"</span>,
     panel.border <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html" class="external-link">element_blank</a></span><span class="op">(</span><span class="op">)</span>,
     panel.background <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html" class="external-link">element_blank</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></code></pre></div>
-<p><img src="simple_examples_files/figure-html/unnamed-chunk-21-1.png" width="2187.5" style="display: block; margin: auto;"></p>
+<p><img src="simple_examples_files/figure-html/unnamed-chunk-17-1.png" width="2187.5" style="display: block; margin: auto;"></p>
 <hr>
-</div>
-</div>
-<div class="section level3">
-<h3 class="tabset" id="palette-cardcaptor">Palette: cardcaptor<a class="anchor" aria-label="anchor" href="#palette-cardcaptor"></a>
-</h3>
-<div class="section level4">
-<h4 id="some-time-series-5">Some time series<a class="anchor" aria-label="anchor" href="#some-time-series-5"></a>
-</h4>
-<div class="sourceCode" id="cb26"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">EuStockMarkets</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span>
-  <span class="fu"><a href="https://rdrr.io/r/base/as.data.frame.html" class="external-link">as.data.frame</a></span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span>
-  <span class="fu"><a href="https://tidyr.tidyverse.org/reference/gather.html" class="external-link">gather</a></span><span class="op">(</span><span class="va">index</span>, <span class="va">price</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span>
-  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html" class="external-link">mutate</a></span><span class="op">(</span>time <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/time.html" class="external-link">time</a></span><span class="op">(</span><span class="va">EuStockMarkets</span><span class="op">)</span>, <span class="fl">4</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> 
-  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_path.html" class="external-link">geom_line</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>color <span class="op">=</span> <span class="va">index</span>,x<span class="op">=</span><span class="va">time</span>,y<span class="op">=</span><span class="va">price</span><span class="op">)</span>, size <span class="op">=</span> <span class="fl">1</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu"><a href="../reference/scale_color_rseries.html">scale_color_rseries</a></span><span class="op">(</span>palette <span class="op">=</span> <span class="st">"cardcaptor"</span>, palette_family <span class="op">=</span> <span class="va">palette_anime</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html" class="external-link">theme_minimal</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
-<p><img src="simple_examples_files/figure-html/unnamed-chunk-22-1.png" width="2187.5" style="display: block; margin: auto;"></p>
-</div>
-<div class="section level4">
-<h4 id="a-classic-boxplot-5">A classic boxplot<a class="anchor" aria-label="anchor" href="#a-classic-boxplot-5"></a>
-</h4>
-<div class="sourceCode" id="cb27"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># Libraries</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org" class="external-link">tidyverse</a></span><span class="op">)</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org" class="external-link">ggplot2</a></span><span class="op">)</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/diognes/Rseries" class="external-link">Rseries</a></span><span class="op">)</span>
-
-<span class="co"># create a dataset</span>
-<span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span>
-  name<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span> <span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="st">"Clow Book"</span>,<span class="fl">500</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="st">"Clow Cards"</span>,<span class="fl">500</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="st">"Clow Cards"</span>,<span class="fl">500</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="st">"Sakura Cards"</span>,<span class="fl">20</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="st">'Sakura Cards'</span>, <span class="fl">100</span><span class="op">)</span>  <span class="op">)</span>,
-  value<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html" class="external-link">rnorm</a></span><span class="op">(</span><span class="fl">500</span>, <span class="fl">10</span>, <span class="fl">5</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html" class="external-link">rnorm</a></span><span class="op">(</span><span class="fl">500</span>, <span class="fl">13</span>, <span class="fl">1</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html" class="external-link">rnorm</a></span><span class="op">(</span><span class="fl">500</span>, <span class="fl">18</span>, <span class="fl">1</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html" class="external-link">rnorm</a></span><span class="op">(</span><span class="fl">20</span>, <span class="fl">25</span>, <span class="fl">4</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html" class="external-link">rnorm</a></span><span class="op">(</span><span class="fl">100</span>, <span class="fl">12</span>, <span class="fl">1</span><span class="op">)</span> <span class="op">)</span>
-<span class="op">)</span>
-
-<span class="co"># Plot</span>
-<span class="va">pal</span><span class="op">=</span><span class="fu"><a href="../reference/serie_palette.html">serie_palette</a></span><span class="op">(</span><span class="st">"cardcaptor"</span>, <span class="va">palette_anime</span>, <span class="fl">5</span><span class="op">)</span>
-
-<span class="va">data</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span>
-  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>x<span class="op">=</span><span class="va">name</span>, y<span class="op">=</span><span class="va">value</span>, fill<span class="op">=</span><span class="va">name</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
-    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_boxplot.html" class="external-link">geom_boxplot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span>
-    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_manual.html" class="external-link">scale_fill_manual</a></span><span class="op">(</span>values<span class="op">=</span><span class="op">(</span><span class="va">pal</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
-    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html" class="external-link">theme_classic</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span>
-    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html" class="external-link">theme</a></span><span class="op">(</span>
-      legend.position<span class="op">=</span><span class="st">"none"</span>,
-      plot.title <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html" class="external-link">element_text</a></span><span class="op">(</span>size<span class="op">=</span><span class="fl">11</span><span class="op">)</span>
-    <span class="op">)</span> <span class="op">+</span>
-    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html" class="external-link">ggtitle</a></span><span class="op">(</span><span class="st">"A classic boxplot"</span><span class="op">)</span> <span class="op">+</span>
-    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html" class="external-link">xlab</a></span><span class="op">(</span><span class="st">""</span><span class="op">)</span></code></pre></div>
-<p><img src="simple_examples_files/figure-html/unnamed-chunk-23-1.png" width="2187.5" style="display: block; margin: auto;"></p>
-</div>
-<div class="section level4">
-<h4 id="some-density-charts-5">Some density charts<a class="anchor" aria-label="anchor" href="#some-density-charts-5"></a>
-</h4>
-<div class="sourceCode" id="cb28"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># Libraries</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org" class="external-link">tidyverse</a></span><span class="op">)</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org" class="external-link">ggplot2</a></span><span class="op">)</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/diognes/Rseries" class="external-link">Rseries</a></span><span class="op">)</span>
-
-<span class="va">pal</span><span class="op">=</span><span class="fu"><a href="../reference/serie_palette.html">serie_palette</a></span><span class="op">(</span><span class="st">"cardcaptor"</span>, <span class="va">palette_anime</span>, <span class="fl">5</span><span class="op">)</span>
-
-<span class="co"># Using the diamods dataset we can some of the palettes in our package.</span>
-
-<span class="co"># Multi density chart</span>
-<span class="va">p1</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="va">diamonds</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>x<span class="op">=</span><span class="va">price</span>,fill<span class="op">=</span><span class="va">cut</span><span class="op">)</span><span class="op">)</span><span class="op">+</span>
-  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_density.html" class="external-link">geom_density</a></span><span class="op">(</span>position<span class="op">=</span><span class="st">'stack'</span><span class="op">)</span><span class="op">+</span>
-  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_manual.html" class="external-link">scale_fill_manual</a></span><span class="op">(</span>values<span class="op">=</span><span class="op">(</span><span class="va">pal</span><span class="op">)</span><span class="op">)</span><span class="op">+</span>
-  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html" class="external-link">theme_minimal</a></span><span class="op">(</span><span class="op">)</span>
-<span class="va">p1</span></code></pre></div>
-<p><img src="simple_examples_files/figure-html/unnamed-chunk-24-1.png" width="2187.5" style="display: block; margin: auto;"></p>
-<div class="sourceCode" id="cb29"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># Stacked density plot</span>
-<span class="va">p2</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span>data<span class="op">=</span><span class="va">diamonds</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>x<span class="op">=</span><span class="va">price</span>, group<span class="op">=</span><span class="va">cut</span>, fill<span class="op">=</span><span class="va">cut</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
-    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_density.html" class="external-link">geom_density</a></span><span class="op">(</span>adjust<span class="op">=</span><span class="fl">1.5</span>, position<span class="op">=</span><span class="st">"fill"</span><span class="op">)</span> <span class="op">+</span>
-    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_manual.html" class="external-link">scale_fill_manual</a></span><span class="op">(</span>values<span class="op">=</span><span class="op">(</span><span class="va">pal</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
-    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html" class="external-link">theme_minimal</a></span><span class="op">(</span><span class="op">)</span>
-<span class="va">p2</span></code></pre></div>
-<p><img src="simple_examples_files/figure-html/unnamed-chunk-24-2.png" width="2187.5" style="display: block; margin: auto;"></p>
-</div>
-<div class="section level4">
-<h4 id="some-data-art-5">Some data art<a class="anchor" aria-label="anchor" href="#some-data-art-5"></a>
-</h4>
-<div class="sourceCode" id="cb30"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># Libraries</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org" class="external-link">ggplot2</a></span><span class="op">)</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">RColorBrewer</span><span class="op">)</span>
-
-<span class="co"># create a dataset</span>
-<span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">345</span><span class="op">)</span>
-<span class="va">ngroup</span><span class="op">=</span><span class="fl">30</span>
-<span class="va">names</span><span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/paste.html" class="external-link">paste</a></span><span class="op">(</span><span class="st">"G_"</span>,<span class="fu"><a href="https://rdrr.io/r/base/seq.html" class="external-link">seq</a></span><span class="op">(</span><span class="fl">1</span>,<span class="va">ngroup</span><span class="op">)</span>,sep<span class="op">=</span><span class="st">""</span><span class="op">)</span>
-<span class="va">DAT</span><span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span><span class="op">)</span>
-
-<span class="kw">for</span><span class="op">(</span><span class="va">i</span> <span class="kw">in</span> <span class="fu"><a href="https://rdrr.io/r/base/seq.html" class="external-link">seq</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">30</span><span class="op">)</span><span class="op">)</span><span class="op">{</span>
-  <span class="va">data</span><span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html" class="external-link">matrix</a></span><span class="op">(</span><span class="fl">0</span>, <span class="va">ngroup</span> , <span class="fl">3</span><span class="op">)</span><span class="op">)</span>
-  <span class="va">data</span><span class="op">[</span>,<span class="fl">1</span><span class="op">]</span><span class="op">=</span><span class="va">i</span>
-  <span class="va">data</span><span class="op">[</span>,<span class="fl">2</span><span class="op">]</span><span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/sample.html" class="external-link">sample</a></span><span class="op">(</span><span class="va">names</span>, <span class="fu"><a href="https://rdrr.io/r/base/nrow.html" class="external-link">nrow</a></span><span class="op">(</span><span class="va">data</span><span class="op">)</span><span class="op">)</span>
-  <span class="va">data</span><span class="op">[</span>,<span class="fl">3</span><span class="op">]</span><span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/proportions.html" class="external-link">prop.table</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/sample.html" class="external-link">sample</a></span><span class="op">(</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="fl">0</span>,<span class="fl">113</span><span class="op">)</span>,<span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="va">ngroup</span><span class="op">)</span><span class="op">)</span> ,<span class="fu"><a href="https://rdrr.io/r/base/nrow.html" class="external-link">nrow</a></span><span class="op">(</span><span class="va">data</span><span class="op">)</span><span class="op">)</span><span class="op">)</span>
-  <span class="va">DAT</span><span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/cbind.html" class="external-link">rbind</a></span><span class="op">(</span><span class="va">DAT</span>,<span class="va">data</span><span class="op">)</span>
-<span class="op">}</span>
-<span class="fu"><a href="https://rdrr.io/r/base/colnames.html" class="external-link">colnames</a></span><span class="op">(</span><span class="va">DAT</span><span class="op">)</span><span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Year"</span>,<span class="st">"Group"</span>,<span class="st">"Value"</span><span class="op">)</span>
-<span class="va">DAT</span><span class="op">=</span><span class="va">DAT</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/order.html" class="external-link">order</a></span><span class="op">(</span> <span class="va">DAT</span><span class="op">$</span><span class="va">Year</span>, <span class="va">DAT</span><span class="op">$</span><span class="va">Group</span><span class="op">)</span> , <span class="op">]</span>
-
-<span class="co"># plot</span>
-<span class="va">pal</span> <span class="op">=</span> <span class="fu"><a href="../reference/serie_palette.html">serie_palette</a></span><span class="op">(</span><span class="st">"cardcaptor"</span>, <span class="va">palette_anime</span>, <span class="fl">6</span><span class="op">)</span>
-<span class="va">pal</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/grDevices/colorRamp.html" class="external-link">colorRampPalette</a></span><span class="op">(</span><span class="va">pal</span><span class="op">)</span><span class="op">(</span><span class="va">ngroup</span><span class="op">)</span>
-<span class="va">pal</span><span class="op">=</span><span class="va">pal</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/sample.html" class="external-link">sample</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fu"><a href="https://rdrr.io/r/base/length.html" class="external-link">length</a></span><span class="op">(</span><span class="va">pal</span><span class="op">)</span><span class="op">)</span> , size<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/length.html" class="external-link">length</a></span><span class="op">(</span><span class="va">pal</span><span class="op">)</span> <span class="op">)</span> <span class="op">]</span>
-
-<span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="va">DAT</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>x<span class="op">=</span><span class="va">Year</span>, y<span class="op">=</span><span class="va">Value</span>, fill<span class="op">=</span><span class="va">Group</span> <span class="op">)</span><span class="op">)</span> <span class="op">+</span> 
-  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_ribbon.html" class="external-link">geom_area</a></span><span class="op">(</span>alpha<span class="op">=</span><span class="fl">1</span><span class="op">)</span><span class="op">+</span>
-  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html" class="external-link">theme_bw</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_manual.html" class="external-link">scale_fill_manual</a></span><span class="op">(</span>values <span class="op">=</span> <span class="va">pal</span><span class="op">)</span><span class="op">+</span>
-  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html" class="external-link">theme</a></span><span class="op">(</span>
-    text <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html" class="external-link">element_blank</a></span><span class="op">(</span><span class="op">)</span>,
-    line <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html" class="external-link">element_blank</a></span><span class="op">(</span><span class="op">)</span>,
-    title <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html" class="external-link">element_blank</a></span><span class="op">(</span><span class="op">)</span>,
-    legend.position<span class="op">=</span><span class="st">"none"</span>,
-    panel.border <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html" class="external-link">element_blank</a></span><span class="op">(</span><span class="op">)</span>,
-    panel.background <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html" class="external-link">element_blank</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></code></pre></div>
-<p><img src="simple_examples_files/figure-html/unnamed-chunk-25-1.png" width="2187.5" style="display: block; margin: auto;"></p>
 </div>
 </div>
 </div>
 <div class="section level2">
-<h2 id="fill-function-and-color">Fill function and color<a class="anchor" aria-label="anchor" href="#fill-function-and-color"></a>
+<h2 id="functions-for-fill-and-color-aesthetics">Functions for fill and color aesthetics<a class="anchor" aria-label="anchor" href="#functions-for-fill-and-color-aesthetics"></a>
 </h2>
-<div class="sourceCode" id="cb31"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb22"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">diamonds</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> 
   <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">cut</span>, fill <span class="op">=</span> <span class="va">clarity</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
   <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html" class="external-link">geom_bar</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span>
   <span class="fu"><a href="../reference/scale_fill_rseries.html">scale_fill_rseries</a></span><span class="op">(</span><span class="op">)</span><span class="op">+</span>
   <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html" class="external-link">theme_bw</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span>
   <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html" class="external-link">ggtitle</a></span><span class="op">(</span><span class="st">'scale_fill_rseries()'</span><span class="op">)</span></code></pre></div>
-<p><img src="simple_examples_files/figure-html/unnamed-chunk-26-1.png" width="2187.5" style="display: block; margin: auto;"></p>
-<div class="sourceCode" id="cb32"><pre class="downlit sourceCode r">
+<p><img src="simple_examples_files/figure-html/unnamed-chunk-18-1.png" width="2187.5" style="display: block; margin: auto;"></p>
+<div class="sourceCode" id="cb23"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">EuStockMarkets</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span>
   <span class="fu"><a href="https://rdrr.io/r/base/as.data.frame.html" class="external-link">as.data.frame</a></span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span>
   <span class="fu"><a href="https://tidyr.tidyverse.org/reference/gather.html" class="external-link">gather</a></span><span class="op">(</span><span class="va">index</span>, <span class="va">price</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span>
@@ -845,7 +612,7 @@
   <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_path.html" class="external-link">geom_line</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>color <span class="op">=</span> <span class="va">index</span>,x<span class="op">=</span><span class="va">time</span>,y<span class="op">=</span><span class="va">price</span><span class="op">)</span>, size <span class="op">=</span> <span class="fl">1</span><span class="op">)</span> <span class="op">+</span>
   <span class="fu"><a href="../reference/scale_color_rseries.html">scale_color_rseries</a></span><span class="op">(</span>palette <span class="op">=</span> <span class="st">"poke"</span>,palette_family <span class="op">=</span> <span class="va">palette_anime</span><span class="op">)</span>  <span class="op">+</span>
   <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html" class="external-link">theme_minimal</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
-<p><img src="simple_examples_files/figure-html/unnamed-chunk-27-1.png" width="2187.5" style="display: block; margin: auto;"></p>
+<p><img src="simple_examples_files/figure-html/unnamed-chunk-19-1.png" width="2187.5" style="display: block; margin: auto;"></p>
 </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
     </nav></aside>
