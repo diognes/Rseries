@@ -1,7 +1,7 @@
 Package: Rseries
 Type: Package
 Title: Package for customize ggplots with palette based from series and anime
-Version: 0.0.1.0
+Version: 0.0.1
 Encoding: UTF-8
 Authors@R:
   c(person(given = "Jesus",
