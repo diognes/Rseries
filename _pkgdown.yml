@@ -1,7 +1,7 @@
 url: https://diognes.github.io/Rseries/
 template:
   bootstrap: 5
-  bootswatch: sandstone
+  bootswatch: flatly
 
 navbar:
   structure:
