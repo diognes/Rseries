@@ -5,7 +5,7 @@
 \alias{palette_peru}
 \title{Complete list of palettes}
 \format{
-An object of class \code{list} of length 1.
+An object of class \code{list} of length 8.
 }
 \usage{
 palette_peru

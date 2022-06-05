@@ -15,15 +15,40 @@ This vignette contains some examples about the use of Rseries package.
 
 # Brief explanation
 
+```{r,echo=F,message=F,warning=F}
+library(tidyverse)
+library(ggplot2)
+library(Rseries)
+
+```
+
+
+
 ```{r setup, include=FALSE}
 
 knitr::opts_chunk$set(echo = TRUE,warning=FALSE,message=FALSE,fig.align="center", dpi=300)
 
 ```
 
-We can select until 3 palette families at the moment: `palette_netflyx`, `palette_anime`,`palette_peru`. Each family is a list of palette from series. Each palette in this package have a total of 6 colors. With the function `serie_palette` we can select a palette following this entry:
+We can select until 3 palette families at the moment: `palette_netflyx`, `palette_anime`,`palette_peru`. Each family is a list of palette from series. Each palette in this package have a total of 6 colors. In brief the total list of palettes avaliable per family is :
 
-`serie_palette( enter name, palette of preference, number of colors, type discrete or continous )`
+```{r,echo=F,warning=F,message=F}
+show_pal(palette_family = palette_netflyx)
+```
+
+```{r,echo=F,warning=F,message=F}
+show_pal(palette_family = palette_anime)
+```
+
+```{r,echo=F,warning=F,message=F}
+show_pal(palette_family = palette_peru)
+```
+
+
+
+With the function `serie_palette` we can select a palette from a specific family following this entry:
+
+`serie_palette( enter name, palette of preference, palette family ,number of colors, type discrete or continous )`
 
 Let's see some examples using ggplot2 based on [the R Graph Gallery
 ](https://r-graph-gallery.com/) examples.

@@ -4,7 +4,7 @@ pkgdown_sha: ~
 articles:
   Introduction_to_R_series: Introduction_to_R_series.html
   palette_samples: palette_samples.html
-last_built: 2022-06-05T19:19Z
+last_built: 2022-06-05T19:50Z
 urls:
   reference: https://diognes.github.io/Rseries/reference
   article: https://diognes.github.io/Rseries/articles

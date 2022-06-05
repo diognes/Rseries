@@ -96,8 +96,12 @@
 <div class="section level2">
 <h2 id="brief-explanation">Brief explanation<a class="anchor" aria-label="anchor" href="#brief-explanation"></a>
 </h2>
-<p>We can select until 3 palette families at the moment: <code>palette_netflyx</code>, <code>palette_anime</code>,<code>palette_peru</code>. Each family is a list of palette from series. Each palette in this package have a total of 6 colors. With the function <code>serie_palette</code> we can select a palette following this entry:</p>
-<p><code>serie_palette( enter name, palette of preference, number of colors, type discrete or continous )</code></p>
+<p>We can select until 3 palette families at the moment: <code>palette_netflyx</code>, <code>palette_anime</code>,<code>palette_peru</code>. Each family is a list of palette from series. Each palette in this package have a total of 6 colors. In brief the total list of palettes avaliable per family is :</p>
+<p><img src="Introduction_to_R_series_files/figure-html/unnamed-chunk-2-1.png" width="2187.5" style="display: block; margin: auto;"></p>
+<p><img src="Introduction_to_R_series_files/figure-html/unnamed-chunk-3-1.png" width="2187.5" style="display: block; margin: auto;"></p>
+<p><img src="Introduction_to_R_series_files/figure-html/unnamed-chunk-4-1.png" width="2187.5" style="display: block; margin: auto;"></p>
+<p>With the function <code>serie_palette</code> we can select a palette from a specific family following this entry:</p>
+<p><code>serie_palette( enter name, palette of preference, palette family ,number of colors, type discrete or continous )</code></p>
 <p>Let’s see some examples using ggplot2 based on <a href="https://r-graph-gallery.com/" class="external-link">the R Graph Gallery</a> examples.</p>
 <hr>
 </div>
@@ -128,7 +132,7 @@
   <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_path.html" class="external-link">geom_line</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>color <span class="op">=</span> <span class="va">index</span>,x<span class="op">=</span><span class="va">time</span>,y<span class="op">=</span><span class="va">price</span><span class="op">)</span>, size <span class="op">=</span> <span class="fl">1</span><span class="op">)</span> <span class="op">+</span>
   <span class="fu"><a href="../reference/scale_color_rseries.html">scale_color_rseries</a></span><span class="op">(</span>palette <span class="op">=</span> <span class="st">"Lupin"</span>, palette_family <span class="op">=</span> <span class="va">palette_netflyx</span><span class="op">)</span> <span class="op">+</span>
   <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html" class="external-link">theme_minimal</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
-<p><img src="Introduction_to_R_series_files/figure-html/unnamed-chunk-2-1.png" width="2187.5" style="display: block; margin: auto;"></p>
+<p><img src="Introduction_to_R_series_files/figure-html/unnamed-chunk-6-1.png" width="2187.5" style="display: block; margin: auto;"></p>
 </div>
 <div class="section level6">
 <h6 id="a-classic-boxplot">A classic boxplot<a class="anchor" aria-label="anchor" href="#a-classic-boxplot"></a>
@@ -152,7 +156,7 @@
     <span class="op">)</span> <span class="op">+</span>
     <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html" class="external-link">ggtitle</a></span><span class="op">(</span><span class="st">"A classic boxplot"</span><span class="op">)</span> <span class="op">+</span>
     <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html" class="external-link">xlab</a></span><span class="op">(</span><span class="st">" "</span><span class="op">)</span></code></pre></div>
-<p><img src="Introduction_to_R_series_files/figure-html/unnamed-chunk-3-1.png" width="2187.5" style="display: block; margin: auto;"></p>
+<p><img src="Introduction_to_R_series_files/figure-html/unnamed-chunk-7-1.png" width="2187.5" style="display: block; margin: auto;"></p>
 </div>
 <div class="section level6">
 <h6 id="some-density-charts">Some density charts<a class="anchor" aria-label="anchor" href="#some-density-charts"></a>
@@ -171,7 +175,7 @@
       <span class="fu"><a href="../reference/scale_fill_rseries.html">scale_fill_rseries</a></span><span class="op">(</span>palette_family <span class="op">=</span> <span class="va">palette_netflyx</span>, palette <span class="op">=</span> <span class="st">"Lupin"</span><span class="op">)</span> <span class="op">+</span>
   <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html" class="external-link">theme_minimal</a></span><span class="op">(</span><span class="op">)</span>
 <span class="va">p1</span></code></pre></div>
-<p><img src="Introduction_to_R_series_files/figure-html/unnamed-chunk-4-1.png" width="2187.5" style="display: block; margin: auto;"></p>
+<p><img src="Introduction_to_R_series_files/figure-html/unnamed-chunk-8-1.png" width="2187.5" style="display: block; margin: auto;"></p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># Stacked density plot</span>
 <span class="va">p2</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span>data<span class="op">=</span><span class="va">diamonds</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>x<span class="op">=</span><span class="va">price</span>, group<span class="op">=</span><span class="va">cut</span>, fill<span class="op">=</span><span class="va">cut</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
@@ -179,7 +183,7 @@
         <span class="fu"><a href="../reference/scale_fill_rseries.html">scale_fill_rseries</a></span><span class="op">(</span>palette_family <span class="op">=</span> <span class="va">palette_netflyx</span>, palette <span class="op">=</span> <span class="st">"Lupin"</span><span class="op">)</span> <span class="op">+</span>
     <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html" class="external-link">theme_minimal</a></span><span class="op">(</span><span class="op">)</span>
 <span class="va">p2</span></code></pre></div>
-<p><img src="Introduction_to_R_series_files/figure-html/unnamed-chunk-4-2.png" width="2187.5" style="display: block; margin: auto;"></p>
+<p><img src="Introduction_to_R_series_files/figure-html/unnamed-chunk-8-2.png" width="2187.5" style="display: block; margin: auto;"></p>
 </div>
 <div class="section level6">
 <h6 id="some-data-art">Some data art<a class="anchor" aria-label="anchor" href="#some-data-art"></a>
@@ -221,7 +225,7 @@
     legend.position<span class="op">=</span><span class="st">"none"</span>,
     panel.border <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html" class="external-link">element_blank</a></span><span class="op">(</span><span class="op">)</span>,
     panel.background <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html" class="external-link">element_blank</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></code></pre></div>
-<p><img src="Introduction_to_R_series_files/figure-html/unnamed-chunk-5-1.png" width="2187.5" style="display: block; margin: auto;"></p>
+<p><img src="Introduction_to_R_series_files/figure-html/unnamed-chunk-9-1.png" width="2187.5" style="display: block; margin: auto;"></p>
 <hr>
 <hr>
 </div>
@@ -245,7 +249,7 @@
   <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_path.html" class="external-link">geom_line</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>color <span class="op">=</span> <span class="va">index</span>,x<span class="op">=</span><span class="va">time</span>,y<span class="op">=</span><span class="va">price</span><span class="op">)</span>, size <span class="op">=</span> <span class="fl">1</span><span class="op">)</span> <span class="op">+</span>
   <span class="fu"><a href="../reference/scale_color_rseries.html">scale_color_rseries</a></span><span class="op">(</span>palette <span class="op">=</span> <span class="st">"poputepik"</span>, palette_family <span class="op">=</span> <span class="va">palette_anime</span><span class="op">)</span> <span class="op">+</span>
   <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html" class="external-link">theme_minimal</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
-<p><img src="Introduction_to_R_series_files/figure-html/unnamed-chunk-6-1.png" width="2187.5" style="display: block; margin: auto;"></p>
+<p><img src="Introduction_to_R_series_files/figure-html/unnamed-chunk-10-1.png" width="2187.5" style="display: block; margin: auto;"></p>
 </div>
 <div class="section level6">
 <h6 id="a-classic-boxplot-1">A classic boxplot<a class="anchor" aria-label="anchor" href="#a-classic-boxplot-1"></a>
@@ -276,7 +280,7 @@
     <span class="op">)</span> <span class="op">+</span>
     <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html" class="external-link">ggtitle</a></span><span class="op">(</span><span class="st">"A classic boxplot"</span><span class="op">)</span> <span class="op">+</span>
     <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html" class="external-link">xlab</a></span><span class="op">(</span><span class="st">""</span><span class="op">)</span></code></pre></div>
-<p><img src="Introduction_to_R_series_files/figure-html/unnamed-chunk-7-1.png" width="2187.5" style="display: block; margin: auto;"></p>
+<p><img src="Introduction_to_R_series_files/figure-html/unnamed-chunk-11-1.png" width="2187.5" style="display: block; margin: auto;"></p>
 </div>
 <div class="section level6">
 <h6 id="some-density-charts-1">Some density charts<a class="anchor" aria-label="anchor" href="#some-density-charts-1"></a>
@@ -297,7 +301,7 @@
   <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_manual.html" class="external-link">scale_fill_manual</a></span><span class="op">(</span>values<span class="op">=</span><span class="op">(</span><span class="va">pal</span><span class="op">)</span><span class="op">)</span><span class="op">+</span>
   <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html" class="external-link">theme_minimal</a></span><span class="op">(</span><span class="op">)</span>
 <span class="va">p1</span></code></pre></div>
-<p><img src="Introduction_to_R_series_files/figure-html/unnamed-chunk-8-1.png" width="2187.5" style="display: block; margin: auto;"></p>
+<p><img src="Introduction_to_R_series_files/figure-html/unnamed-chunk-12-1.png" width="2187.5" style="display: block; margin: auto;"></p>
 <div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># Stacked density plot</span>
 <span class="va">p2</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span>data<span class="op">=</span><span class="va">diamonds</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>x<span class="op">=</span><span class="va">price</span>, group<span class="op">=</span><span class="va">cut</span>, fill<span class="op">=</span><span class="va">cut</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
@@ -305,7 +309,7 @@
     <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_manual.html" class="external-link">scale_fill_manual</a></span><span class="op">(</span>values<span class="op">=</span><span class="op">(</span><span class="va">pal</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
     <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html" class="external-link">theme_minimal</a></span><span class="op">(</span><span class="op">)</span>
 <span class="va">p2</span></code></pre></div>
-<p><img src="Introduction_to_R_series_files/figure-html/unnamed-chunk-8-2.png" width="2187.5" style="display: block; margin: auto;"></p>
+<p><img src="Introduction_to_R_series_files/figure-html/unnamed-chunk-12-2.png" width="2187.5" style="display: block; margin: auto;"></p>
 </div>
 <div class="section level6">
 <h6 id="some-data-art-1">Some data art<a class="anchor" aria-label="anchor" href="#some-data-art-1"></a>
@@ -347,7 +351,7 @@
     legend.position<span class="op">=</span><span class="st">"none"</span>,
     panel.border <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html" class="external-link">element_blank</a></span><span class="op">(</span><span class="op">)</span>,
     panel.background <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html" class="external-link">element_blank</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></code></pre></div>
-<p><img src="Introduction_to_R_series_files/figure-html/unnamed-chunk-9-1.png" width="2187.5" style="display: block; margin: auto;"></p>
+<p><img src="Introduction_to_R_series_files/figure-html/unnamed-chunk-13-1.png" width="2187.5" style="display: block; margin: auto;"></p>
 <hr>
 </div>
 </div>
@@ -366,7 +370,7 @@
   <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_path.html" class="external-link">geom_line</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>color <span class="op">=</span> <span class="va">index</span>,x<span class="op">=</span><span class="va">time</span>,y<span class="op">=</span><span class="va">price</span><span class="op">)</span>, size <span class="op">=</span> <span class="fl">1</span><span class="op">)</span> <span class="op">+</span>
   <span class="fu"><a href="../reference/scale_color_rseries.html">scale_color_rseries</a></span><span class="op">(</span>palette <span class="op">=</span> <span class="st">"tokyorev"</span>, palette_family <span class="op">=</span> <span class="va">palette_anime</span><span class="op">)</span> <span class="op">+</span>
   <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html" class="external-link">theme_minimal</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
-<p><img src="Introduction_to_R_series_files/figure-html/unnamed-chunk-10-1.png" width="2187.5" style="display: block; margin: auto;"></p>
+<p><img src="Introduction_to_R_series_files/figure-html/unnamed-chunk-14-1.png" width="2187.5" style="display: block; margin: auto;"></p>
 </div>
 <div class="section level6">
 <h6 id="a-classic-boxplot-2">A classic boxplot<a class="anchor" aria-label="anchor" href="#a-classic-boxplot-2"></a>
@@ -397,7 +401,7 @@
     <span class="op">)</span> <span class="op">+</span>
     <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html" class="external-link">ggtitle</a></span><span class="op">(</span><span class="st">"A classic boxplot"</span><span class="op">)</span> <span class="op">+</span>
     <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html" class="external-link">xlab</a></span><span class="op">(</span><span class="st">""</span><span class="op">)</span></code></pre></div>
-<p><img src="Introduction_to_R_series_files/figure-html/unnamed-chunk-11-1.png" width="2187.5" style="display: block; margin: auto;"></p>
+<p><img src="Introduction_to_R_series_files/figure-html/unnamed-chunk-15-1.png" width="2187.5" style="display: block; margin: auto;"></p>
 </div>
 <div class="section level6">
 <h6 id="some-density-charts-2">Some density charts<a class="anchor" aria-label="anchor" href="#some-density-charts-2"></a>
@@ -418,7 +422,7 @@
   <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_manual.html" class="external-link">scale_fill_manual</a></span><span class="op">(</span>values<span class="op">=</span><span class="op">(</span><span class="va">pal</span><span class="op">)</span><span class="op">)</span><span class="op">+</span>
   <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html" class="external-link">theme_minimal</a></span><span class="op">(</span><span class="op">)</span>
 <span class="va">p1</span></code></pre></div>
-<p><img src="Introduction_to_R_series_files/figure-html/unnamed-chunk-12-1.png" width="2187.5" style="display: block; margin: auto;"></p>
+<p><img src="Introduction_to_R_series_files/figure-html/unnamed-chunk-16-1.png" width="2187.5" style="display: block; margin: auto;"></p>
 <div class="sourceCode" id="cb15"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># Stacked density plot</span>
 <span class="va">p2</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span>data<span class="op">=</span><span class="va">diamonds</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>x<span class="op">=</span><span class="va">price</span>, group<span class="op">=</span><span class="va">cut</span>, fill<span class="op">=</span><span class="va">cut</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
@@ -426,7 +430,7 @@
     <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_manual.html" class="external-link">scale_fill_manual</a></span><span class="op">(</span>values<span class="op">=</span><span class="op">(</span><span class="va">pal</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
     <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html" class="external-link">theme_minimal</a></span><span class="op">(</span><span class="op">)</span>
 <span class="va">p2</span></code></pre></div>
-<p><img src="Introduction_to_R_series_files/figure-html/unnamed-chunk-12-2.png" width="2187.5" style="display: block; margin: auto;"></p>
+<p><img src="Introduction_to_R_series_files/figure-html/unnamed-chunk-16-2.png" width="2187.5" style="display: block; margin: auto;"></p>
 </div>
 <div class="section level6">
 <h6 id="some-data-art-2">Some data art<a class="anchor" aria-label="anchor" href="#some-data-art-2"></a>
@@ -468,7 +472,7 @@
     legend.position<span class="op">=</span><span class="st">"none"</span>,
     panel.border <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html" class="external-link">element_blank</a></span><span class="op">(</span><span class="op">)</span>,
     panel.background <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html" class="external-link">element_blank</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></code></pre></div>
-<p><img src="Introduction_to_R_series_files/figure-html/unnamed-chunk-13-1.png" width="2187.5" style="display: block; margin: auto;"></p>
+<p><img src="Introduction_to_R_series_files/figure-html/unnamed-chunk-17-1.png" width="2187.5" style="display: block; margin: auto;"></p>
 <hr>
 </div>
 </div>
@@ -487,7 +491,7 @@
   <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_path.html" class="external-link">geom_line</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>color <span class="op">=</span> <span class="va">index</span>,x<span class="op">=</span><span class="va">time</span>,y<span class="op">=</span><span class="va">price</span><span class="op">)</span>, size <span class="op">=</span> <span class="fl">1</span><span class="op">)</span> <span class="op">+</span>
   <span class="fu"><a href="../reference/scale_color_rseries.html">scale_color_rseries</a></span><span class="op">(</span>palette <span class="op">=</span> <span class="st">"yona"</span>, palette_family <span class="op">=</span> <span class="va">palette_anime</span><span class="op">)</span> <span class="op">+</span>
   <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html" class="external-link">theme_minimal</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
-<p><img src="Introduction_to_R_series_files/figure-html/unnamed-chunk-14-1.png" width="2187.5" style="display: block; margin: auto;"></p>
+<p><img src="Introduction_to_R_series_files/figure-html/unnamed-chunk-18-1.png" width="2187.5" style="display: block; margin: auto;"></p>
 </div>
 <div class="section level6">
 <h6 id="a-classic-boxplot-3">A classic boxplot<a class="anchor" aria-label="anchor" href="#a-classic-boxplot-3"></a>
@@ -518,7 +522,7 @@
     <span class="op">)</span> <span class="op">+</span>
     <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html" class="external-link">ggtitle</a></span><span class="op">(</span><span class="st">"A classic boxplot"</span><span class="op">)</span> <span class="op">+</span>
     <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html" class="external-link">xlab</a></span><span class="op">(</span><span class="st">""</span><span class="op">)</span></code></pre></div>
-<p><img src="Introduction_to_R_series_files/figure-html/unnamed-chunk-15-1.png" width="2187.5" style="display: block; margin: auto;"></p>
+<p><img src="Introduction_to_R_series_files/figure-html/unnamed-chunk-19-1.png" width="2187.5" style="display: block; margin: auto;"></p>
 </div>
 <div class="section level6">
 <h6 id="some-density-charts-3">Some density charts<a class="anchor" aria-label="anchor" href="#some-density-charts-3"></a>
@@ -539,7 +543,7 @@
   <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_manual.html" class="external-link">scale_fill_manual</a></span><span class="op">(</span>values<span class="op">=</span><span class="op">(</span><span class="va">pal</span><span class="op">)</span><span class="op">)</span><span class="op">+</span>
   <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html" class="external-link">theme_minimal</a></span><span class="op">(</span><span class="op">)</span>
 <span class="va">p1</span></code></pre></div>
-<p><img src="Introduction_to_R_series_files/figure-html/unnamed-chunk-16-1.png" width="2187.5" style="display: block; margin: auto;"></p>
+<p><img src="Introduction_to_R_series_files/figure-html/unnamed-chunk-20-1.png" width="2187.5" style="display: block; margin: auto;"></p>
 <div class="sourceCode" id="cb20"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># Stacked density plot</span>
 <span class="va">p2</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span>data<span class="op">=</span><span class="va">diamonds</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>x<span class="op">=</span><span class="va">price</span>, group<span class="op">=</span><span class="va">cut</span>, fill<span class="op">=</span><span class="va">cut</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
@@ -547,7 +551,7 @@
     <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_manual.html" class="external-link">scale_fill_manual</a></span><span class="op">(</span>values<span class="op">=</span><span class="op">(</span><span class="va">pal</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
     <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html" class="external-link">theme_minimal</a></span><span class="op">(</span><span class="op">)</span>
 <span class="va">p2</span></code></pre></div>
-<p><img src="Introduction_to_R_series_files/figure-html/unnamed-chunk-16-2.png" width="2187.5" style="display: block; margin: auto;"></p>
+<p><img src="Introduction_to_R_series_files/figure-html/unnamed-chunk-20-2.png" width="2187.5" style="display: block; margin: auto;"></p>
 </div>
 <div class="section level6">
 <h6 id="some-data-art-3">Some data art<a class="anchor" aria-label="anchor" href="#some-data-art-3"></a>
@@ -589,7 +593,7 @@
     legend.position<span class="op">=</span><span class="st">"none"</span>,
     panel.border <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html" class="external-link">element_blank</a></span><span class="op">(</span><span class="op">)</span>,
     panel.background <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html" class="external-link">element_blank</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></code></pre></div>
-<p><img src="Introduction_to_R_series_files/figure-html/unnamed-chunk-17-1.png" width="2187.5" style="display: block; margin: auto;"></p>
+<p><img src="Introduction_to_R_series_files/figure-html/unnamed-chunk-21-1.png" width="2187.5" style="display: block; margin: auto;"></p>
 <hr>
 </div>
 </div>
@@ -604,7 +608,7 @@
   <span class="fu"><a href="../reference/scale_fill_rseries.html">scale_fill_rseries</a></span><span class="op">(</span><span class="op">)</span><span class="op">+</span>
   <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html" class="external-link">theme_bw</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span>
   <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html" class="external-link">ggtitle</a></span><span class="op">(</span><span class="st">'scale_fill_rseries()'</span><span class="op">)</span></code></pre></div>
-<p><img src="Introduction_to_R_series_files/figure-html/unnamed-chunk-18-1.png" width="2187.5" style="display: block; margin: auto;"></p>
+<p><img src="Introduction_to_R_series_files/figure-html/unnamed-chunk-22-1.png" width="2187.5" style="display: block; margin: auto;"></p>
 <div class="sourceCode" id="cb23"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">EuStockMarkets</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span>
   <span class="fu"><a href="https://rdrr.io/r/base/as.data.frame.html" class="external-link">as.data.frame</a></span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span>
@@ -614,7 +618,7 @@
   <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_path.html" class="external-link">geom_line</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>color <span class="op">=</span> <span class="va">index</span>,x<span class="op">=</span><span class="va">time</span>,y<span class="op">=</span><span class="va">price</span><span class="op">)</span>, size <span class="op">=</span> <span class="fl">1</span><span class="op">)</span> <span class="op">+</span>
   <span class="fu"><a href="../reference/scale_color_rseries.html">scale_color_rseries</a></span><span class="op">(</span>palette <span class="op">=</span> <span class="st">"poke"</span>,palette_family <span class="op">=</span> <span class="va">palette_anime</span><span class="op">)</span>  <span class="op">+</span>
   <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html" class="external-link">theme_minimal</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
-<p><img src="Introduction_to_R_series_files/figure-html/unnamed-chunk-19-1.png" width="2187.5" style="display: block; margin: auto;"></p>
+<p><img src="Introduction_to_R_series_files/figure-html/unnamed-chunk-23-1.png" width="2187.5" style="display: block; margin: auto;"></p>
 </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
     </nav></aside>

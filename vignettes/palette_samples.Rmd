@@ -13,7 +13,7 @@ output:
 
 # A showcase of some palettes
 
-Rseries contains beauty palettes to personalize plots with the style of series of  plataforms like Netflyx, Amazon Prime  or local TV from Latin American Countries. The avaliable palettes are : 
+Rseries contains beauty palettes to personalize plots with the style of series of  plataforms like Netflyx, Crunchyroll(Anime)  or local TV from Latin American Countries like Peru. The total list of palettes are : 
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE,warning=FALSE,message=FALSE,fig.align="center")

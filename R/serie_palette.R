@@ -142,3 +142,50 @@ print.serie_palette <- function(x, ...) {
    }
  }
  
+ 
+ 
+ # 6. Show pal function 
+ #::::::::::::::::::::::::::::::::::::::::
+ #' function to show all the avaliable palettes in a specific family .
+ #' 
+ #' @export
+ 
+ show_pal <- function(name = "all",palette_family = palette_netflyx,
+                      n    = 6    ,rev    = TRUE,...){
+   
+   if(sum(unique(name %in% names(palette_family))) == 1) {
+     list_names <- palette_family[name]
+     range_color <- sapply(X = list_names,FUN = function(x){list(x[1:n])})
+     
+     if(rev == 1){
+       list_panel <- rev(range_color) %>%
+         map(.f = ~.) %>%
+         unikn::seecol(
+           pal_names = names(list_names),
+           title = "Name of specific Rseries colour palettes"
+           ,...
+         )
+     }else{
+       list_panel <- range_color %>%
+         map(.f = ~.) %>%
+         unikn::seecol(
+           pal_names = names(list_names),
+           title = "Name of specific Rseries colour palettes"
+           ,...
+         )
+     }
+     
+   } else if (name == "all"){
+     list_names <- names(palette_family)
+     list_panel <- list_names %>%
+       map(.f = ~Rseries_pal(.,reverse = rev,palette_family = palette_family)(n=n)) %>%
+       unikn::seecol(
+         pal_names = list_names,
+         title = "Name of all Rseries colour palettes",
+         ...
+       )
+   } else {
+     stop("Color palette is incorrect,please use show_pal() and choose a color")
+   }
+   
+ } 
