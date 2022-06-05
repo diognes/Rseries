@@ -162,16 +162,16 @@ print.serie_palette <- function(x, ...) {
          map(.f = ~.) %>%
          unikn::seecol(
            pal_names = names(list_names),
-           title = "Name of specific Rseries colour palettes"
-           ,...
+           title = paste("Name of specific Rseries colour palettes:",
+                         deparse(substitute(palette_family))),...
          )
      }else{
        list_panel <- range_color %>%
          map(.f = ~.) %>%
          unikn::seecol(
            pal_names = names(list_names),
-           title = "Name of specific Rseries colour palettes"
-           ,...
+           title = paste("Name of specific Rseries colour palettes:",
+                         deparse(substitute(palette_family))),...
          )
      }
      
@@ -181,11 +181,12 @@ print.serie_palette <- function(x, ...) {
        map(.f = ~Rseries_pal(.,reverse = rev,palette_family = palette_family)(n=n)) %>%
        unikn::seecol(
          pal_names = list_names,
-         title = "Name of all Rseries colour palettes",
-         ...
+         title = paste("Name of specific Rseries colour palettes:",
+                       deparse(substitute(palette_family))),...
        )
    } else {
      stop("Color palette is incorrect,please use show_pal() and choose a color")
    }
    
  } 
+ 
