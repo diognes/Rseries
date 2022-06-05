@@ -8,7 +8,6 @@
 
 palette_anime = list(
 
-  #posters
   poputepik =c("#0045A0", "#FDDEAE", "#DE7B7C", "#EFC6AF", "#A1B395", "#E7180E"), #6
   
   asobi = c("#B1C9CA", "#F3E4D3", "#CDBCAC", "#A1884D", "#D7E5A9", "#B1CB7A"), #6
