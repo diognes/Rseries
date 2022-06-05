@@ -29,7 +29,6 @@ knitr::include_graphics("./pics/lupin.png", dpi = 144)
 ```
 
 
-
 #### `GambitoDama` | Gambito de dama
 
 ```{r,message=F,warning=F,echo=F}
@@ -54,18 +53,10 @@ knitr::include_graphics("./pics/asobi.png", dpi = 144)
 ```
 
 
-
 #### `bolt` | Boruto
 
 ```{r,message=F,warning=F,echo=F}
 knitr::include_graphics("./pics/bolt.png", dpi = 144)
-```
-
-
-#### `cardcaptor` | Cardcaptor Sakura
-
-```{r,message=F,warning=F,echo=F}
-knitr::include_graphics("./pics/cardcaptor.png", dpi = 144)
 ```
 
 
@@ -76,45 +67,10 @@ knitr::include_graphics("./pics/ggo.png", dpi = 144)
 ```
 
 
-#### `hataraku` | Cells at Work!
-
-```{r,message=F,warning=F,echo=F}
-knitr::include_graphics("./pics/hataraku.png", dpi = 144)
-```
-
-
-#### `mobu2` | Mob Psycho 100 II
-
-```{r,message=F,warning=F,echo=F}
-knitr::include_graphics("./pics/mobu2.png", dpi = 144)
-```
-
-
-#### `naru` | Naruto
-
-```{r,message=F,warning=F,echo=F}
-knitr::include_graphics("./pics/naru.png", dpi = 144)
-```
-
-
-#### `nichi` | Nichijou
-
-```{r,message=F,warning=F,echo=F}
-knitr::include_graphics("./pics/nichi.png", dpi = 144)
-```
-
-
 #### `poputepik` | Pop Team Epic
 
 ```{r,message=F,warning=F,echo=F}
 knitr::include_graphics("./pics/poputepik.png", dpi = 144)
-```
-
-
-#### `sng` | Suisei no Gargantia
-
-```{r,message=F,warning=F,echo=F}
-knitr::include_graphics("./pics/sng.png", dpi = 144)
 ```
 
 
@@ -146,11 +102,6 @@ knitr::include_graphics("./pics/yuri.png", dpi = 144)
 ```
 
 
-#### `yuru2` | Yuru Camp△
-
-```{r,message=F,warning=F,echo=F}
-knitr::include_graphics("./pics/yuru2.png", dpi = 144)
-```
 
 
 
