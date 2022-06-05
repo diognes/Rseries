@@ -60,13 +60,6 @@ knitr::include_graphics("./pics/bolt.png", dpi = 144)
 ```
 
 
-#### `ggo` | SAO Alternative: Gun Game Online
-
-```{r,message=F,warning=F,echo=F}
-knitr::include_graphics("./pics/ggo.png", dpi = 144)
-```
-
-
 #### `poputepik` | Pop Team Epic
 
 ```{r,message=F,warning=F,echo=F}
@@ -74,34 +67,28 @@ knitr::include_graphics("./pics/poputepik.png", dpi = 144)
 ```
 
 
-#### `takt` | Takt Op.Destiny
+
+
+## Peru family palettes
+
+
+#### `AlFondoHaySitio` | Al Fondo hay sitio
 
 ```{r,message=F,warning=F,echo=F}
-knitr::include_graphics("./pics/takt.png", dpi = 144)
-```
-
-
-#### `tokyorev` | Tokyo Revengers
-
-```{r,message=F,warning=F,echo=F}
-knitr::include_graphics("./pics/tokyorev.png", dpi = 144)
-```
-
-
-#### `yona` | Akatsuki no Yona
-
-```{r,message=F,warning=F,echo=F}
-knitr::include_graphics("./pics/yona.png", dpi = 144)
-```
-
-
-#### `yuri` | Yuri!!! on Ice
-
-```{r,message=F,warning=F,echo=F}
-knitr::include_graphics("./pics/yuri.png", dpi = 144)
+knitr::include_graphics("./pics/AlFondoHaySitio.png", dpi = 144)
 ```
 
 
 
+#### `DeVueltaBarrio` | De vuelta al barrio
+```{r,message=F,warning=F,echo=F}
+knitr::include_graphics("./pics/DeVueltaBarrio.png", dpi = 144)
+```
+
+
+#### `MilOficios` | Mil oficios
+```{r,message=F,warning=F,echo=F}
+knitr::include_graphics("./pics/MilOficios.png", dpi = 144)
+```
 
 
