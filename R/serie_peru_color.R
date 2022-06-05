@@ -15,7 +15,9 @@ palette_peru <- list(
       Graffitti       = c("#2b5aab","#1a79b8","#0396d0","#bada80","#98be58","#93af3b"),
       LaPre           = c("#5f6b67","#3b4440","#ea61b2","#c52984","#51e6e3","#27b8bc"),
       MilOficios      = c("#719a4f","#85bc55","#adde6b","#fc8577","#c64034","#a53e30"),
-      QueBuenaRaza    = c("#e92567","#f6739f","#ffa5c4","#6abce2","#5fb1df","#3f91d0")
+      QueBuenaRaza    = c("#e92567","#f6739f","#ffa5c4","#6abce2","#5fb1df","#3f91d0"),
+      DeVueltaBarrio  = c("#b05b3d","#df461e","#e6cda7","#d88e28","#f39e1d","#9c6a1f"),
+      JuntaVecinos    = c("#489b93","#3fbbb4","#8fe9e1","#facb77","#fa9035","#f98435")
 
 
 ) 
