@@ -23,6 +23,6 @@ palette_anime = list(
   
   yona = c("#734243", "#E6B2B0", "#AE4266", "#F6E1E4", "#C18C6C", "#D9CAD1"), #6
   
-  takt = c("#727681", "#FBEFEF", "#C34B54", "#DFAFBB", "#A27E5C", "#EEB987"), #6
+  takt = c("#727681", "#FBEFEF", "#C34B54", "#DFAFBB", "#A27E5C", "#EEB987") #6
 
 )
