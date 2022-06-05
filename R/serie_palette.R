@@ -152,7 +152,8 @@ print.serie_palette <- function(x, ...) {
  
  show_pal <- function(name = "all",palette_family = palette_netflyx,
                       n    = 6    ,rev    = TRUE,...){
-   
+    
+   name.palette <- deparse(substitute(palette_family))
    if(sum(unique(name %in% names(palette_family))) == 1) {
      list_names <- palette_family[name]
      range_color <- sapply(X = list_names,FUN = function(x){list(x[1:n])})
@@ -163,7 +164,8 @@ print.serie_palette <- function(x, ...) {
          unikn::seecol(
            pal_names = names(list_names),
            title = paste("Name of specific Rseries colour palettes:",
-                         deparse(substitute(palette_family))),...
+                         name.palette),
+           ...
          )
      }else{
        list_panel <- range_color %>%
@@ -171,7 +173,8 @@ print.serie_palette <- function(x, ...) {
          unikn::seecol(
            pal_names = names(list_names),
            title = paste("Name of specific Rseries colour palettes:",
-                         deparse(substitute(palette_family))),...
+                         name.palette),
+           ...
          )
      }
      
@@ -182,7 +185,8 @@ print.serie_palette <- function(x, ...) {
        unikn::seecol(
          pal_names = list_names,
          title = paste("Name of specific Rseries colour palettes:",
-                       deparse(substitute(palette_family))),...
+                       name.palette),
+         ...
        )
    } else {
      stop("Color palette is incorrect,please use show_pal() and choose a color")
