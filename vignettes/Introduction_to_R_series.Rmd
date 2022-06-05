@@ -65,6 +65,8 @@ Let's see some examples using ggplot2 based on [the R Graph Gallery
 # Libraries
 library(tidyverse)
 library(ggplot2)
+library(dplyr)
+library(RColorBrewer)
 library(Rseries)
 
 ```
