@@ -5,7 +5,7 @@
 \alias{palette_anime}
 \title{Complete list of palettes}
 \format{
-An object of class \code{list} of length 28.
+An object of class \code{list} of length 23.
 }
 \usage{
 palette_anime
