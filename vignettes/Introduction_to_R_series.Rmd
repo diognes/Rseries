@@ -1134,7 +1134,8 @@ EuStockMarkets %>%
   geom_line(aes(color = index,x=time,y=price), size = 1) +
   scale_color_rseries(palette = "tokyorev",
                       palette_family = palette_anime)  +
-  theme_minimal()
+  theme_minimal()+
+  ggtitle('scale_color_rseries()')
 ```
 
 
