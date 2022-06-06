@@ -22,73 +22,132 @@ knitr::opts_chunk$set(echo = TRUE,warning=FALSE,message=FALSE,fig.align="center"
 
 ## Netflyx family palettes 
 
-#### `lupin` | Lupin
-
+### `lupin` | Lupin
 ```{r,message=F,warning=F,echo=F}
 knitr::include_graphics("./pics/lupin.png", dpi = 144)
 ```
 
-
-#### `GambitoDama` | Gambito de dama
-
+### `GambitoDama` | Gambito de dama
 ```{r,message=F,warning=F,echo=F}
 knitr::include_graphics("./pics/gambito_dama.png", dpi = 144)
 ```
 
-
-#### `EstamosMuert` | Estamos Muertos
-
+### `EstamosMuert` | Estamos Muertos
 ```{r,message=F,warning=F,echo=F}
 knitr::include_graphics("./pics/estamos_muertos.png", dpi = 144)
+```
+
+### `Calamar` | El juego del calamar
+```{r,message=F,warning=F,echo=F}
+knitr::include_graphics("./pics/Calamar.png", dpi = 144)
+```
+
+### `Castlevania` | Castlevania
+```{r,message=F,warning=F,echo=F}
+knitr::include_graphics("./pics/Castlevania.png", dpi = 144)
+```
+
+### `CobraKai` | Cobra Kai
+```{r,message=F,warning=F,echo=F}
+knitr::include_graphics("./pics/CobraKai.png", dpi = 144)
+```
+
+### `crown` | Crown
+```{r,message=F,warning=F,echo=F}
+knitr::include_graphics("./pics/Crown.png", dpi = 144)
+```
+
+### `Ozark` | Ozark
+```{r,message=F,warning=F,echo=F}
+knitr::include_graphics("./pics/Ozark.png", dpi = 144)
 ```
 
 
 
 ## Anime family palettes 
 
-#### `asobi` | Asobi Asobase
-
+### `asobi` | Asobi Asobase
 ```{r,message=F,warning=F,echo=F}
 knitr::include_graphics("./pics/asobi.png", dpi = 144)
 ```
 
-
-#### `bolt` | Boruto
-
+### `bolt` | Boruto
 ```{r,message=F,warning=F,echo=F}
 knitr::include_graphics("./pics/bolt.png", dpi = 144)
 ```
 
+### `ggo` | SAO Alternative: Gun Game Online
+```{r,message=F,warning=F,echo=F}
+knitr::include_graphics("./pics/ggo.png", dpi = 144)
+```
 
-#### `poputepik` | Pop Team Epic
-
+### `poputepik` | Pop Team Epic
 ```{r,message=F,warning=F,echo=F}
 knitr::include_graphics("./pics/poputepik.png", dpi = 144)
 ```
 
+### `takt` | Takt Op.Destiny
+```{r,message=F,warning=F,echo=F}
+knitr::include_graphics("./pics/takt.png", dpi = 144)
+```
+
+### `tokyorev` | Tokyo Revengers
+```{r,message=F,warning=F,echo=F}
+knitr::include_graphics("./pics/tokyorev.png", dpi = 144)
+```
+
+### `yona` | Akatsuki no Yona
+```{r,message=F,warning=F,echo=F}
+knitr::include_graphics("./pics/yona.png", dpi = 144)
+```
+
+### `yuri` | Yuri!!! on Ice
+```{r,message=F,warning=F,echo=F}
+knitr::include_graphics("./pics/yuri.png", dpi = 144)
+```
 
 
 
 ## Peru family palettes
 
-
-#### `AlFondoHaySitio` | Al Fondo hay sitio
-
+### `AlFondoHaySitio` | Al Fondo hay sitio
 ```{r,message=F,warning=F,echo=F}
 knitr::include_graphics("./pics/AlFondoHaySitio.png", dpi = 144)
 ```
 
-
-
-#### `DeVueltaBarrio` | De vuelta al barrio
+### `DeVueltaBarrio` | De vuelta al barrio
 ```{r,message=F,warning=F,echo=F}
 knitr::include_graphics("./pics/DeVueltaBarrio.png", dpi = 144)
 ```
 
+### `Graffitti` | Graffitti
+```{r,message=F,warning=F,echo=F}
+knitr::include_graphics("./pics/Graffitti.png", dpi = 144)
+```
 
-#### `MilOficios` | Mil oficios
+### `GranSangre` | La Gran Sangre
+```{r,message=F,warning=F,echo=F}
+knitr::include_graphics("./pics/GranSangre.png", dpi = 144)
+```
+
+### `JuntaVecinos` | Junta de vecinos
+```{r,message=F,warning=F,echo=F}
+knitr::include_graphics("./pics/JuntaVecinos.png", dpi = 144)
+```
+
+### `LaPre` | La pre
+```{r,message=F,warning=F,echo=F}
+knitr::include_graphics("./pics/LaPre.png", dpi = 144)
+```
+
+### `MilOficios` | Mil oficios
 ```{r,message=F,warning=F,echo=F}
 knitr::include_graphics("./pics/MilOficios.png", dpi = 144)
+```
+
+### `QueBuenaRaza` | Qué buena raza!
+```{r,message=F,warning=F,echo=F}
+knitr::include_graphics("./pics/QueBuenaRaza.png", dpi = 144)
 ```
 
 
