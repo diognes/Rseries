@@ -398,7 +398,7 @@ ggplot(DAT, aes(x=Year, y=Value, fill=Group )) +
 
 ---
 
-# Anime palette family
+# Crunchyroll (Anime palette family)
 
 
 ## Palette: `poputepik` {.tabset}
